@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { Users, Globe, BookOpen } from "lucide-react";
 
