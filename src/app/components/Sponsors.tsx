@@ -1,29 +1,36 @@
+"use client";
+
 import React from "react";
 
 const Sponsors = () => {
   const sponsors = [
-    "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=200&h=100&fit=crop",
-    "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=200&h=100&fit=crop",
-    "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=200&h=100&fit=crop",
-    "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=200&h=100&fit=crop",
+    "/znkh_logo.png",
+    "/miyama_logo.png",
+    "/tekunikal-plus_logo.png",
+    "/kishi_logo.jpg",
+    "/ns_logo.jpg",
+    "/taiho_logo.png",
   ];
 
   return (
-    <section className="py-12 bg-white">
+    <section className="py-12 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
           賛助企業
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
-          {sponsors.map((sponsor, index) => (
-            <div key={index} className="flex justify-center">
-              <img
-                src={sponsor}
-                alt={`スポンサー ${index + 1}`}
-                className="h-12 object-contain grayscale hover:grayscale-0 transition-all"
-              />
-            </div>
-          ))}
+        <div className="marquee-wrapper">
+          <div className="marquee-content">
+            {/* ロゴを2セット繰り返してスムーズなループを実現 */}
+            {[...sponsors, ...sponsors].map((sponsor, index) => (
+              <div key={index} className="marquee-item">
+                <img
+                  src={sponsor}
+                  alt={`スポンサー ${index + 1}`}
+                  className="h-20 object-contain mx-auto"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -7,6 +7,35 @@
   --foreground: #171717;
 }
 
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  } /* 2セット分を移動してループ */
+}
+
+.marquee-wrapper {
+  overflow: hidden;
+  display: flex;
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+}
+
+.marquee-content {
+  display: flex;
+  gap: 2rem; /* ロゴ間のスペース */
+  min-width: 200%; /* 2セット分の幅 */
+  animation: marquee 15s linear infinite; /* スムーズな無限スクロール */
+}
+
+.marquee-item {
+  flex-shrink: 0;
+  width: 150px; /* ロゴサイズ */
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
