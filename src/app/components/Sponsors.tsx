@@ -18,18 +18,25 @@ const Sponsors = () => {
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
           賛助企業
         </h2>
-        <div className="marquee-wrapper">
-          <div className="marquee-content">
-            {/* ロゴを2セット繰り返してスムーズなループを実現 */}
-            {[...sponsors, ...sponsors].map((sponsor, index) => (
-              <div key={index} className="marquee-item">
-                <img
-                  src={sponsor}
-                  alt={`スポンサー ${index + 1}`}
-                  className="h-20 object-contain mx-auto"
-                />
-              </div>
-            ))}
+        {/* スクロールコンテナ */}
+        <div className="relative overflow-hidden">
+          {/* スクロール用のトラック */}
+          <div className="flex whitespace-nowrap">
+            {/* 3セット分のロゴを用意してよりスムーズなループを実現 */}
+            <div className="flex animate-marquee">
+              {[...sponsors, ...sponsors, ...sponsors].map((sponsor, index) => (
+                <div 
+                  key={`sponsor-${index}`} 
+                  className="flex-shrink-0 w-48 mx-8"
+                >
+                  <img
+                    src={sponsor}
+                    alt={`スポンサー ${index + 1}`}
+                    className="h-20 w-full object-contain"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
