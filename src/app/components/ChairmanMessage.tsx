@@ -1,23 +1,44 @@
-import React from "react";
+"use client";
 
-const ChairmanMessage = () => {
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
+
+const ChairmanSection = () => {
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">
-            理事長からのメッセージ
-          </h2>
-          <blockquote className="text-xl text-gray-600 italic mb-8">
-            私たちのチャリティーへようこそ。私たちの使命は、支援を必要とする人々をサポートし、より良い未来を創ることです。皆様の支援が私たちの目標達成には不可欠です。共に歩んでくださり、ありがとうございます。
-          </blockquote>
-          <p className="text-lg font-semibold text-gray-900">
-            - 理事長, セイバー財団
-          </p>
-        </div>
+    <section className="w-full py-24 bg-gray-100 flex flex-col items-center">
+      <div className="max-w-5xl w-full text-center">
+        {/* タイトルと余白調整 */}
+        <h2 className="text-4xl font-bold text-gray-900 mb-10 mt-10 leading-normal">
+          代表ご挨拶
+        </h2>
+
+        {/* 代表ご挨拶のカード */}
+        <Link href="/chairman-message" passHref>
+          <div className="relative group w-[700px] h-[350px] mx-auto cursor-pointer rounded-xl overflow-hidden shadow-xl transition-transform transform hover:scale-105 hover:shadow-2xl bg-white mb-10">
+            {/* 背景カード */}
+            <div className="absolute inset-0 bg-white bg-opacity-95 rounded-xl border border-gray-200"></div>
+
+            {/* 画像 */}
+            <Image
+              src="/chairman_thamnail.png"
+              alt="理事長の挨拶"
+              layout="fill"
+              objectFit="cover"
+              className="rounded-xl"
+            />
+
+            {/* クリック時のオーバーレイ */}
+            <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+              <span className="text-white text-lg font-semibold">
+                詳しく見る
+              </span>
+            </div>
+          </div>
+        </Link>
       </div>
     </section>
   );
 };
 
-export default ChairmanMessage;
+export default ChairmanSection;
