@@ -7,6 +7,7 @@ import Members from "./components/Members";
 import Services from "./components/Services";
 import Blog from "./components/Blog";
 import News from "./components/News";
+import History from "./components/History";
 function App() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -15,6 +16,7 @@ function App() {
         <News />
         <Services />
         <About />
+        <History />
         <ChairmanMessage />
         <Sponsors />
         <Members />
