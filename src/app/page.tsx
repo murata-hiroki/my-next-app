@@ -8,6 +8,7 @@ import Services from "./components/Services";
 import Blog from "./components/Blog";
 import News from "./components/News";
 import History from "./components/History";
+import Joining from "./components/Joining";
 function App() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -19,8 +20,7 @@ function App() {
         <History />
         <ChairmanMessage />
         <Sponsors />
-        <Members />
-        <Blog />
+        <Joining />
       </main>
     </div>
   );
