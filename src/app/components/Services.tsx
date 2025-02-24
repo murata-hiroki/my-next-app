@@ -6,7 +6,7 @@ const Services = () => {
   return (
     <section className="w-full py-20 bg-white flex flex-col items-center">
       {/* セクションタイトル */}
-      <h2 className="text-4xl font-bold text-center mb-12">
+      <h2 className="text-3xl font-bold text-center mb-12">
         松原青年会議所の活動を通じて成長の機会
         <br />
         地域への貢献の機会を提供します。
@@ -25,7 +25,7 @@ const Services = () => {
               className="object-cover w-full h-full"
             />
           </div>
-          <p className="mt-6 text-lg font-medium break-normal">
+          <p className="mt-6 text-lg font-bold   break-normal ">
             青少年育成を対象とした様々な事業を立案実行しています。
           </p>
         </div>
@@ -41,7 +41,7 @@ const Services = () => {
               className="object-cover w-full h-full"
             />
           </div>
-          <p className="mt-6 text-lg font-medium break-normal">
+          <p className="mt-6 text-lg font-bold break-normal">
             地域への貢献活動を通して自身が成長できる機会を提供します。
           </p>
         </div>
@@ -57,7 +57,7 @@ const Services = () => {
               className="object-cover w-full h-full"
             />
           </div>
-          <p className="mt-6 text-lg font-medium break-normal">
+          <p className="mt-6 text-lg font-bold break-normal">
             多彩なイベントを通じて地域社会との交流を促進します。
           </p>
         </div>
