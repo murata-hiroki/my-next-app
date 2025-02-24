@@ -1,44 +1,43 @@
 "use client";
-
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 
-const ChairmanSection = () => {
+const ChairmanMessage = () => {
   return (
-    <section className="w-full py-24 bg-gray-100 flex flex-col items-center">
-      <div className="max-w-5xl w-full text-center">
-        {/* タイトルと余白調整 */}
-        <h2 className="text-4xl font-bold text-gray-900 mb-10 mt-10 leading-normal">
-          代表ご挨拶
-        </h2>
-
-        {/* 代表ご挨拶のカード */}
-        <Link href="/chairman-message" passHref>
-          <div className="relative group w-[700px] h-[350px] mx-auto cursor-pointer rounded-xl overflow-hidden shadow-xl transition-transform transform hover:scale-105 hover:shadow-2xl bg-white mb-10">
-            {/* 背景カード */}
-            <div className="absolute inset-0 bg-white bg-opacity-95 rounded-xl border border-gray-200"></div>
-
-            {/* 画像 */}
-            <Image
-              src="/chairman_thamnail.png"
-              alt="理事長の挨拶"
-              layout="fill"
-              objectFit="cover"
-              className="rounded-xl"
-            />
-
-            {/* クリック時のオーバーレイ */}
-            <div className="absolute inset-0 bg-black bg-opacity-10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-              <span className="text-white text-lg font-semibold">
-                詳しく見る
-              </span>
-            </div>
+    <section className="w-full pt-32 pb-40 min-h-[800px] bg-white flex justify-center items-center overflow-visible">
+      <div className="max-w-7xl w-full flex items-center">
+        {/* 左側のコンテンツ */}
+        <div className="w-1/2 flex flex-col justify-center text-left">
+          <h2 className="text-4xl font-bold mb-6">理事長紹介</h2>
+          <p className="text-gray-700 text-lg mb-6">
+            松原青年会議所 第55代理事長 青木陽平です。
+            <br />
+            今年度のスローガンは「心」を磨き人生を彩るです、地域と共に成長し続けることを大切にしています。
+            <br />
+            計画性をもって時間を活かす大切さを考え、目的や信念を共有し、結束力が高い組織体を作り頑張ってまいります
+          </p>
+          <div className="mt-6">
+            <Link href="/president-message" passHref>
+              <button className="bg-black text-white px-8 py-4 rounded-md text-lg font-bold">
+                理事長所信を読む
+              </button>
+            </Link>
           </div>
-        </Link>
+        </div>
+        {/* 右側の画像 */}
+        <div className="w-1/2 flex justify-end">
+          <Image
+            src="/president-image.png"
+            alt="理事長 青木陽平"
+            width={600}
+            height={400}
+            className="w-auto h-auto rounded-lg object-cover"
+          />
+        </div>
       </div>
     </section>
   );
 };
 
-export default ChairmanSection;
+export default ChairmanMessage;
