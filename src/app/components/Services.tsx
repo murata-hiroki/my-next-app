@@ -1,43 +1,65 @@
 "use client";
-
 import React from "react";
-import { Users, Globe, BookOpen } from "lucide-react";
+import Image from "next/image";
 
 const Services = () => {
-  const services = [
-    {
-      title: "地域貢献活動",
-      icon: Globe,
-      description: "地域社会の発展に向けた様々な活動を展開しています。",
-    },
-    {
-      title: "リーダーシップ開発",
-      icon: Users,
-      description: "次世代のリーダーを育成するプログラムを提供しています。",
-    },
-    {
-      title: "人材育成",
-      icon: BookOpen,
-      description: "会員の成長をサポートする研修プログラムを実施しています。",
-    },
-  ];
-
   return (
-    <section id="services" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-          活動内容
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div key={index} className="bg-blue-50 rounded-lg p-8 text-center">
-              <service.icon className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                {service.title}
-              </h3>
-              <p className="text-gray-600">{service.description}</p>
-            </div>
-          ))}
+    <section className="w-full py-20 bg-white flex flex-col items-center">
+      {/* セクションタイトル */}
+      <h2 className="text-4xl font-bold text-center mb-12">
+        松原青年会議所の活動を通じて成長の機会
+        <br />
+        地域への貢献の機会を提供します。
+      </h2>
+
+      {/* 活動内容の3つのカード */}
+      <div className="max-w-7xl w-full flex justify-center gap-10 flex-wrap">
+        {/* 活動1 */}
+        <div className="flex flex-col items-center text-center w-72 mr-10 ">
+          <div className="w-64 h-64 rounded-full border-4 border-blue-400 overflow-hidden">
+            <Image
+              src="/about_03.png"
+              alt="青少年育成"
+              width={256}
+              height={256}
+              className="object-cover w-full h-full"
+            />
+          </div>
+          <p className="mt-6 text-lg font-medium break-normal">
+            青少年育成を対象とした様々な事業を立案実行しています。
+          </p>
+        </div>
+
+        {/* 活動2 */}
+        <div className="flex flex-col items-center text-center w-72 mr-10 ml-10">
+          <div className="w-64 h-64 rounded-full border-4 border-blue-400 overflow-hidden">
+            <Image
+              src="/about_04.png"
+              alt="地域貢献"
+              width={256}
+              height={256}
+              className="object-cover w-full h-full"
+            />
+          </div>
+          <p className="mt-6 text-lg font-medium break-normal">
+            地域への貢献活動を通して自身が成長できる機会を提供します。
+          </p>
+        </div>
+
+        {/* 活動3 */}
+        <div className="flex flex-col items-center text-center w-72">
+          <div className="w-64 h-64 rounded-full border-4 border-blue-400 overflow-hidden">
+            <Image
+              src="/about_02.png"
+              alt="交流イベント"
+              width={256}
+              height={256}
+              className="object-cover w-full h-full"
+            />
+          </div>
+          <p className="mt-6 text-lg font-medium break-normal">
+            多彩なイベントを通じて地域社会との交流を促進します。
+          </p>
         </div>
       </div>
     </section>
