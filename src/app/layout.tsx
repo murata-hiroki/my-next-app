@@ -1,4 +1,4 @@
-import Navbar from "./components/Navbar";
+import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "./globals.css"; // Tailwind を適用
 
@@ -10,7 +10,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body>
-        <Navbar />
+        <Header />
         <main>{children}</main>
         <Footer />
       </body>

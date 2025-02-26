@@ -1,30 +1,43 @@
 "use client";
-
 import React from "react";
+import Image from "next/image";
 
-const Hero = () => {
+const HeroSection = () => {
   return (
-    <section
-      id="home"
-      className="relative bg-gradient-to-b from-[#E6F4FA] to-white py-20 sm:py-32"
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-          明るい豊かな社会を目指して
-          <span className="block text-[#009FE3]">地域と共に成長する</span>
-        </h1>
-        <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          松原青年会議所は、地域社会の発展と会員の成長を通じて、より良い松原市を創造します。
-        </p>
-        <button
-          onClick={() => alert("入会に関する詳細情報をお送りいたします。")}
-          className="bg-[#009FE3] text-white px-8 py-3 rounded-md text-lg font-semibold hover:bg-[#0082BA] transition-colors"
-        >
-          入会案内
-        </button>
+    <section className="w-full min-h-[85vh] flex items-center justify-center bg-white mt-4">
+      <div className="max-w-7xl w-full border rounded-3xl shadow-md border-black  flex items-stretch min-h-[75vh]">
+        {/* 左側のコンテンツ */}
+        <div className="w-1/2 flex flex-col justify-center m-12">
+          <h1 className="text-5xl font-bold mb-8">地域を変える未来を変える</h1>
+          <p className="text-gray-700 mb-10 text-1xl leading-relaxed">
+            松原青年会議所は松原の発展に貢献するため、様々な活動を行っています。
+            青年を力を集結し、明るい豊かな社会を実現します。
+          </p>
+          <div className="flex space-x-8">
+            <button className="bg-black text-white px-10 py-2 rounded-md text-xl">
+              詳細
+            </button>
+            <button className="border border-black text-black px-10 py-5 rounded-md text-xl">
+              参加
+            </button>
+          </div>
+        </div>
+
+        {/* 右側の画像 */}
+        <div className="w-1/2 relative flex justify-center items-center">
+          <div className="rounded-lg overflow-hidden w-full h-full">
+            <Image
+              src="/hero.jpg"
+              alt="地域の風景"
+              layout="fill"
+              objectFit="cover"
+              className="rounded-3xl"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );
 };
 
-export default Hero;
+export default HeroSection;
