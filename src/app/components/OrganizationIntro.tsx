@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const OrganizationIntro = () => {
   return (
-    <section className="w-full py-32 bg-white flex justify-center items-center">
+    <section className="w-full pt-32 bg-white flex justify-center items-center">
       <div className="max-w-7xl w-full flex items-center gap-12">
         {/* 左側のテキスト */}
         <div className="w-1/2">

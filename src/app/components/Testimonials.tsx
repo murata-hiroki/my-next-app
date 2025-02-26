@@ -4,7 +4,7 @@ import { Star } from "lucide-react";
 
 const Testimonials = () => {
   return (
-    <section className="w-full py-32 bg-white flex flex-col justify-center items-center">
+    <section className="w-full pt-32 bg-white flex flex-col justify-center items-center">
       <div className="max-w-7xl w-full">
         <h2 className="text-4xl font-bold mb-4">地域の方々からの声</h2>
         <p className="text-gray-600 text-lg mb-12">

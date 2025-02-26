@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-white py-12 border-t border-gray-300">
+    <footer className="w-full bg-white pt-32 ">
       <div className="max-w-7xl mx-auto px-8 border border-black">
         <div className="flex justify-between items-center mb-8 mt-8">
           {/* 左側のロゴと説明 */}
