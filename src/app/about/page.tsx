@@ -8,7 +8,7 @@ import Benefits from "../components/Benefits";
 function About() {
   return (
     <>
-      <Overview />
+      <Overview title="松原青年会議所について" image="/about_mainimage.jpg" />
       <OrganizationIntro />
       <Testimonials />
       <Members />

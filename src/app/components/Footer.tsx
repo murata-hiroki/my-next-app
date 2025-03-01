@@ -126,7 +126,7 @@ const Footer = () => {
 
         {/* フッター下部の著作権表示とリンク */}
       </div>
-      <div className="flex justify-between text-sm text-gray-600 border-t border-gray-300 pt-4 max-w-7xl mx-auto px-8">
+      <div className="flex justify-between text-sm text-gray-600 border-t border-gray-300 pt-4 max-w-7xl mx-auto ">
         <p>© 2024 松原青年会議所. 全著作権所有。</p>
         <div className="flex space-x-4">
           <Link href="/privacy" className="hover:underline">
