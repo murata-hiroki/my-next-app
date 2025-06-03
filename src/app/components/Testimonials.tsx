@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import { Star } from "lucide-react";
 
 const Testimonials = () => {
@@ -29,10 +30,18 @@ const Testimonials = () => {
                 <p className="font-semibold">田中 太郎</p>
                 <p className="text-gray-500 text-sm">地域住民, 松原市</p>
               </div>
-              <span className="font-bold">Webflow</span>
+              {/* Webflowロゴに変更 */}
+              <Image
+                src="/matubara_logo.png" // Webflowロゴ画像のパス
+                alt="Webflow"
+                width={40}
+                height={40}
+                className="w-16"
+              />
             </div>
           </div>
 
+          {/* 声2 */}
           <div>
             <div className="flex items-center mb-2">
               {[...Array(5)].map((_, i) => (
@@ -48,7 +57,14 @@ const Testimonials = () => {
                 <p className="font-semibold">佐藤 花子</p>
                 <p className="text-gray-500 text-sm">学生, 松原高校</p>
               </div>
-              <span className="font-bold">Webflow</span>
+              {/* Webflowロゴに変更 */}
+              <Image
+                src="/matubara_logo.png"
+                alt="Webflow"
+                width={40}
+                height={40}
+                className="w-16"
+              />
             </div>
           </div>
         </div>
