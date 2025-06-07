@@ -17,13 +17,12 @@ const Header = () => {
         {/* Logo */}
         <div className="flex-shrink-0 mx-auto lg:absolute lg:left-1/2 lg:transform lg:-translate-x-1/2">
           <Link href="/">
-            {/* next/image を使用する際は width と height を指定することを推奨します */}
             <Image
-              src="/jc_logo.png" // 事前にpublicフォルダに配置してください
+              src="/jc_logo.png"
               alt="JCI Logo"
-              width={297} // 元の画像のアスペクト比に基づいて設定
-              height={39} // 元の画像のアスペクト比に基づいて設定
-              className="h-10 w-auto" // 高さを10にし、幅は自動調整
+              width={297}
+              height={39}
+              className="h-8 w-auto lg:h-10"
             />
           </Link>
         </div>
