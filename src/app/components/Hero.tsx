@@ -17,7 +17,7 @@ const HeroSection = () => {
             青年を力を集結し、明るい豊かな社会を実現します。
           </p>
           <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
-            <button className="bg-black text-white px-8 py-3 rounded-md text-lg sm:text-xl w-full sm:w-auto hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
+            <button className="bg-primary-600 text-white px-8 py-3 rounded-md text-lg sm:text-xl w-full sm:w-auto hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
               詳細
             </button>
             <button className="border border-black text-black px-8 py-3 rounded-md text-lg sm:text-xl w-full sm:w-auto hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2">

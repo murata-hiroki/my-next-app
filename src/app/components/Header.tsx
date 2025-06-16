@@ -59,14 +59,14 @@ const Header = () => {
         <nav className="hidden lg:flex items-center space-x-4">
           <a
             href="/join"
-            className="bg-gradient-to-r from-orange-500 to-purple-500 text-white px-5 py-2 text-sm sm:text-base flex items-center gap-2 rounded-full min-w-[140px] justify-center h-10 hover:opacity-90 transition-opacity"
+            className="bg-primary-600 text-white px-5 py-2 text-sm sm:text-base flex items-center gap-2 rounded-full min-w-[140px] justify-center h-10 hover:opacity-90 transition-opacity"
           >
             <UserPlus size={18} className="shrink-0" />
             <span className="whitespace-nowrap">入会案内</span>
           </a>
           <a
             href="/contact"
-            className="bg-gradient-to-r from-orange-500 to-purple-500 text-white px-5 py-2 text-sm sm:text-base flex items-center gap-2 rounded-full min-w-[140px] justify-center h-10 hover:opacity-90 transition-opacity"
+            className="bg-primary-600 text-white px-5 py-2 text-sm sm:text-base flex items-center gap-2 rounded-full min-w-[140px] justify-center h-10 hover:opacity-90 transition-opacity"
           >
             <Mail size={18} className="shrink-0" />
             <span className="whitespace-nowrap">お問い合わせ</span>
@@ -133,10 +133,6 @@ const Header = () => {
           </nav>
         </div>
       )}
-
-      {/* Decorative lines - PC (lg以上) のみ表示 */}
-      <div className="hidden lg:block absolute left-96 bottom-0 transform w-20 h-4 border-t border-r border-black border-b-2 border-b-white"></div>
-      <div className="hidden lg:block absolute left-[19rem] bottom-0 transform w-20 h-4 border-t border-l border-black border-b-2 border-b-white"></div>
     </header>
   );
 };

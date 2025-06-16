@@ -17,7 +17,7 @@ const Joining = () => {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 sm:justify-center">
           <Link href="/details" passHref>
-            <button className="bg-black text-white px-6 py-3 rounded-md text-base sm:text-lg font-bold w-full sm:w-auto">
+            <button className="bg-primary-600 text-white px-6 py-3 rounded-md text-base sm:text-lg font-bold w-full sm:w-auto">
               詳細
             </button>
           </Link>

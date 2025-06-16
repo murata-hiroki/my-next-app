@@ -35,7 +35,7 @@ const ChairmanMessage = () => {
           </p>
           <div className="mt-2">
             <Link href="/president-message" passHref>
-              <button className="bg-black text-white px-6 sm:px-8 py-3 sm:py-4 rounded-md text-base sm:text-lg font-bold">
+              <button className="bg-primary-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-md text-base sm:text-lg font-bold">
                 理事長所信を読む
               </button>
             </Link>
@@ -58,7 +58,7 @@ const ChairmanMessage = () => {
             </p>
             <div className="mt-2">
               <Link href="/president-message" passHref>
-                <button className="bg-black text-white px-8 py-4 rounded-md text-lg md:text-xl font-bold">
+                <button className="bg-primary-600 text-white px-8 py-4 rounded-md text-lg md:text-xl font-bold">
                   理事長所信を読む
                 </button>
               </Link>
