@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
@@ -8,7 +9,7 @@ const HeroSection = () => {
       {/* 親コンテナ: モバイルではボーダーと角丸なし、lg以上で適用 */}
       <div className="max-w-7xl w-full shadow-md flex flex-col lg:flex-row items-stretch min-h-[75vh] lg:border lg:rounded-3xl lg:border-black lg:overflow-hidden">
         {/* 左側のコンテンツ (モバイルでは下に表示) */}
-        <div className="w-full lg:w-1/2 flex flex-col justify-center p-6 sm:p-8 md:p-12 order-2 lg:order-1">
+        <div className="w-full lg:w-1/2 flex flex-col justify-center p-6 sm:p-8 order-2 lg:order-1">
           <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 md:mb-8">
             地域を変える未来を変える
           </h1>
@@ -17,9 +18,11 @@ const HeroSection = () => {
             青年を力を集結し、明るい豊かな社会を実現します。
           </p>
           <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
-            <button className="bg-primary-600 text-white px-8 py-3 rounded-md text-lg sm:text-xl w-full sm:w-auto hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2">
-              詳細
-            </button>
+            <Link href="/about">
+              <button className="bg-primary-600 text-white px-8 py-3 rounded-md text-base sm:text-lg font-semibold hover:bg-primary-700 transition-colors shadow-sm w-full">
+                詳細はこちら
+              </button>
+            </Link>
             <button className="border border-black text-black px-8 py-3 rounded-md text-lg sm:text-xl w-full sm:w-auto hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2">
               参加
             </button>

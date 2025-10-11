@@ -1,38 +1,48 @@
 "use client";
-
 import React from "react";
+import Image from "next/image";
 
-const About = () => {
+const AboutSection = () => {
   return (
-    <section id="about" className="py-20 bg-white">
-      <div className="max-w-screen-lg mx-auto px-6">
-        {/* 見出し */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 uppercase tracking-widest">
-            ABOUT
+    <section className="w-full py-20 bg-white flex justify-center items-center">
+      <div className="w-full max-w-7xl grid grid-cols-1 md:grid-cols-2 items-center gap-8 lg:gap-16 px-4 sm:px-8">
+        {/* === 左側：テキストエリア === */}
+        {/* モバイルでは画像の上に表示されるように順序を指定 */}
+        <div className="order-2 md:order-1">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6">
+            松原青年会議所の歴史と背景
           </h2>
-          <p className="text-gray-600 text-sl">青年会議所について</p>
-          <div className="w-16 h-1 bg-[#009FE3] mx-auto mt-2"></div>
+          <p className="text-gray-700 text-base sm:text-lg mb-6">
+            松原青年会議所は、地域社会の発展を目指し、1965年に設立されました。
+            以来、青少年育成や地域貢献活動を通じて、多くの人々に影響を与えてきました。
+          </p>
+          <ul className="list-inside list-disc space-y-2 text-base sm:text-lg text-gray-700 marker:text-primary-500 mb-8">
+            <li>地域との連携を大切にしています。</li>
+            <li>活動を通してメンバーの自己成長ができる環境を提供します。</li>
+            <li>未来を見据えた取り組みを行っています。</li>
+          </ul>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <button className="bg-primary-600 text-white px-8 py-3 rounded-md text-base sm:text-lg font-semibold hover:bg-primary-700 transition-colors shadow-sm w-full">
+              詳細はこちら
+            </button>
+            <button className="border border-gray-400 text-gray-800 px-8 py-3 rounded-md text-base sm:text-lg font-semibold hover:bg-gray-100 transition-colors">
+              参加する
+            </button>
+          </div>
         </div>
 
-        {/* セクション1 */}
-        <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16 mb-16">
-          {/* 左の画像 */}
-          <div className="md:w-1/2">
-            <img
-              src="/about-image1.jpg"
-              alt="交通インフラ"
-              className="w-full rounded-lg"
+        {/* === 右側：画像エリア === */}
+        {/* モバイルではテキストエリアより先に表示 */}
+        <div className="order-1 md:order-2 w-full">
+          <div className="relative w-full aspect-square rounded-xl overflow-hidden shadow-lg">
+            <Image
+              src="/history-image.jpg"
+              alt="歴史のイメージ"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
+              style={{ objectPosition: "center" }} // 中央や右など、画像に合わせて調整
             />
-          </div>
-          {/* 右のテキスト */}
-          <div className="md:w-1/2">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              明るい豊かな社会の実現
-            </h3>
-            <p className="text-gray-600 leading-relaxed">
-              松原青年会議所は、１９７０年９月２０日に創設され、全盛期には１００名前後のメンバーが在籍していました。しかしながら現在は、１７名（２０２５年２月現在）程度のメンバー数となり、年齢層の割合では、３６歳以上のメンバーが３割、３５歳以下のメンバーは７割と比較的若い世代が多く、さらに女性会員も増えてきている青年会議所となっています。メンバー数は少ないですが、一致団結し、多くの事業を開催するなど、子ども達のため、まちのために、日夜汗をかいて、全力で活動しています。当青年会議所の特徴の一つとしては、行政、企業、各種団体、先輩諸兄の皆様との協働させていただき、運動が幅広く展開することができています。
-            </p>
           </div>
         </div>
       </div>
@@ -40,4 +50,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutSection;

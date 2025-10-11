@@ -8,7 +8,7 @@ import { useLoading } from "../../contexts/LoadingProvider"; // パスはご自�
 // ページを構成する各コンポーネントをインポートします
 import Hero from "./components/Hero";
 import Sponsors from "./components/Sponsors";
-import About from "./components/About";
+// import About from "./components/About";
 import ChairmanMessage from "./components/ChairmanMessage";
 import Services from "./components/Services";
 import News from "./components/News";
@@ -34,7 +34,7 @@ function HomePage() {
         <Hero />
         <News />
         <Services />
-        <About />
+        {/* <About /> */}
         <History />
         <ChairmanMessage />
         <Sponsors />
