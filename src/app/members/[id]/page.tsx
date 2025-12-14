@@ -3,7 +3,7 @@ import { getMember, members } from "@/app/data/members";
 
 import MemberHero from "@/app/components/members/MemberHero";
 import MemberProfileSection from "@/app/components/members/MemberProfileSection";
-import InterviewSection from "@/app/components/members/InterviewSection";
+import InterviewChat from "@/app/components/members/InterviewSection";
 import MemberCardSection from "@/app/components/members/MemberCardSection";
 import MemberMessageSection from "@/app/components/members/MemberMessageSection";
 import MemberScheduleSection from "@/app/components/members/MemberScheduleSection";
@@ -30,9 +30,13 @@ export default async function MemberDetailPage({ params }: Props) {
   const m = getMember(id);
   if (!m) notFound();
 
-  const index = members.findIndex((x) => x.id === m.id);
-  const prev = index > 0 ? members[index - 1] : null;
-  const next = index < members.length - 1 ? members[index + 1] : null;
+  // Q&Aだけ抽出（チャット表示用）
+  const qaBlocks = m.blocks.filter(
+    (b) => b.type === "qa"
+  ) as Extract<(typeof m.blocks)[number], { type: "qa" }>[];
+
+  // Q&A以外（従来セクション表示用）
+  const otherBlocks = m.blocks.filter((b) => b.type !== "qa");
 
   return (
     <div id="main-contents">
@@ -45,50 +49,39 @@ export default async function MemberDetailPage({ params }: Props) {
             {/* Profile */}
             <MemberProfileSection text={m.profileText} />
 
-            {/* Interview blocks */}
-            {m.blocks.map((b, i) => {
+            {/* Interview (Chat UI) */}
+            {qaBlocks.length ? (
+              <InterviewChat
+                blocks={qaBlocks}
+                interviewerName="インタビュアー"
+                memberName={m.name}
+              />
+            ) : null}
+
+            {/* Other blocks */}
+            {otherBlocks.map((b, i) => {
               switch (b.type) {
-                case "qa":
-                  return <InterviewSection key={i} block={b} />;
                 case "card":
                   return <MemberCardSection key={i} block={b} />;
                 case "message":
                   return <MemberMessageSection key={i} block={b} />;
                 case "schedule":
                   return <MemberScheduleSection key={i} block={b} />;
+                default:
+                  return null;
               }
             })}
 
-            {/* Pager */}
-            <MemberPager
-              prev={
-                prev
-                  ? {
-                      href: `/members/${prev.id}`,
-                      label: prev.label,
-                      name: prev.name,
-                      imageSrc: prev.mvImageSrc,
-                    }
-                  : null
-              }
-              next={
-                next
-                  ? {
-                      href: `/members/${next.id}`,
-                      label: next.label,
-                      name: next.name,
-                      imageSrc: next.mvImageSrc,
-                    }
-                  : null
-              }
-              allHref="/members"
-            />
+            {/* Pager（一覧へ戻るだけ） */}
+            <MemberPager allHref="/members" />
 
             {/* Recommend */}
             {m.recommend?.length ? (
               <section className="pt-4">
                 <header className="mb-4">
-                  <p className="text-sm font-semibold text-gray-500">Recommend</p>
+                  <p className="text-sm font-semibold text-gray-500">
+                    Recommend
+                  </p>
                   <h2 className="text-2xl font-bold">おすすめコンテンツ</h2>
                 </header>
 
