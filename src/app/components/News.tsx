@@ -2,45 +2,11 @@
 import React from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { getLatestNews } from "../data/news";
 
 const News = () => {
   const router = useRouter();
-
-  const articles = [
-    {
-      id: 1,
-      image: "/about-image1.jpg",
-      alt: "地域イベント参加者募集中",
-      category: "お知らせ",
-      title: "地域イベント参加者募集中！",
-      description: "地域の皆様と共に楽しむイベントを開催します。",
-      author: "青木陽平",
-      date: "11月 2023",
-      readTime: "3分で読める",
-    },
-    {
-      id: 2,
-      image: "/about-image1.jpg",
-      alt: "新しいメンバーを募集中",
-      category: "お知らせ",
-      title: "新しいメンバーを募集中！",
-      description: "共に地域を盛り上げる仲間を探しています。",
-      author: "佐藤健",
-      date: "10月 2023",
-      readTime: "4分で読める",
-    },
-    {
-      id: 3,
-      image: "/about-image1.jpg",
-      alt: "地域貢献活動のご案内",
-      category: "イベント",
-      title: "地域貢献活動のご案内",
-      description: "地域のための活動に参加しませんか？",
-      author: "田中美咲",
-      date: "9月 2023",
-      readTime: "6分で読める",
-    },
-  ];
+  const articles = getLatestNews(3);
 
   return (
     <section className="w-full flex flex-col items-center bg-white py-10 sm:py-16 md:py-20">
@@ -87,7 +53,10 @@ const News = () => {
         </div>
 
         <div className="w-full flex justify-end mt-8 sm:mt-10 md:mt-12">
-          <button className="border border-black text-black px-4 sm:px-6 py-2 sm:py-3 rounded-md text-base sm:text-lg">
+          <button
+            onClick={() => router.push("/news")}
+            className="border border-black text-black px-4 sm:px-6 py-2 sm:py-3 rounded-md text-base sm:text-lg hover:bg-black hover:text-white transition-colors duration-200"
+          >
             すべて見る
           </button>
         </div>

@@ -41,7 +41,7 @@ const Header = () => {
               理事長所信
             </Link>
             <Link
-              href="/blog"
+              href="/news"
               className="text-gray-700 text-sm hover:text-primary-600 transition-colors"
             >
               新着情報
@@ -134,7 +134,7 @@ const Header = () => {
               理事長所信
             </Link>
             <Link
-              href="/blog"
+              href="/news"
               className="text-gray-700 block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100 hover:text-primary-600 transition-colors"
               onClick={closeMenu}
             >

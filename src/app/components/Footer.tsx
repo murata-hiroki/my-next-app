@@ -47,7 +47,7 @@ const Footer = () => {
                 入会案内
               </Link>
               <Link
-                href="/blog"
+                href="/news"
                 className="block text-gray-700 hover:text-black"
               >
                 新着情報
