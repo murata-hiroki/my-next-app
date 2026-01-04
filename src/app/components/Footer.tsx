@@ -35,7 +35,7 @@ const Footer = () => {
           <div className="w-full md:w-1/2 grid grid-cols-2 gap-4 text-left md:text-right">
             <div>
               <Link
-                href="/activities"
+                href="/active"
                 className="block text-gray-700 hover:text-black"
               >
                 活動内容
@@ -47,16 +47,10 @@ const Footer = () => {
                 入会案内
               </Link>
               <Link
-                href="/news"
+                href="/blog"
                 className="block text-gray-700 hover:text-black"
               >
                 新着情報
-              </Link>
-              <Link
-                href="/supporters"
-                className="block text-gray-700 hover:text-black"
-              >
-                賛助会員
               </Link>
               <Link
                 href="/contact"
@@ -66,12 +60,6 @@ const Footer = () => {
               </Link>
             </div>
             <div>
-              <Link
-                href="/sns"
-                className="block text-gray-700 hover:text-black"
-              >
-                SNS連携
-              </Link>
               <Link
                 href="/members"
                 className="block text-gray-700 hover:text-black"
@@ -83,18 +71,6 @@ const Footer = () => {
                 className="block text-gray-700 hover:text-black"
               >
                 理事長紹介
-              </Link>
-              <Link
-                href="/companies"
-                className="block text-gray-700 hover:text-black"
-              >
-                企業一覧
-              </Link>
-              <Link
-                href="/community"
-                className="block text-gray-700 hover:text-black"
-              >
-                地域貢献
               </Link>
             </div>
           </div>
@@ -128,19 +104,8 @@ const Footer = () => {
       </div>
       <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-600 border-t border-gray-300 pt-4 max-w-7xl mx-auto px-4 sm:px-8 gap-2">
         <p className="text-center md:text-left">
-          © 2024 松原青年会議所. 全著作権所有。
+          © 2026 松原青年会議所. 全著作権所有。
         </p>
-        <div className="flex space-x-4">
-          <Link href="/privacy" className="hover:underline">
-            プライバシーポリシー
-          </Link>
-          <Link href="/terms" className="hover:underline">
-            利用規約
-          </Link>
-          <Link href="/cookies" className="hover:underline">
-            クッキー設定
-          </Link>
-        </div>
       </div>
     </footer>
   );
