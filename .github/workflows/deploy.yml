@@ -26,13 +26,15 @@ jobs:
       - name: Build Next.js
         run: npm run build
 
-      - name: Deploy to Sakura Internet via FTPS
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./out/
-          server-dir: ${{ secrets.FTP_SERVER_DIR }}
-          protocol: ftps
-          port: 21
+      - name: Deploy to Sakura Internet via LFTP
+        run: |
+          sudo apt-get install -y lftp
+          lftp -c "
+            set ftp:ssl-allow yes;
+            set ftp:ssl-force yes;
+            set ftp:ssl-protect-data yes;
+            set ssl:verify-certificate no;
+            open -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_SERVER }};
+            mirror -R --verbose --delete ./out/ ${{ secrets.FTP_SERVER_DIR }};
+            quit;
+          "
