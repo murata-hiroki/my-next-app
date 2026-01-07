@@ -26,9 +26,13 @@ jobs:
       - name: Build Next.js
         run: npm run build
 
+      - name: Install lftp
+        run: |
+          sudo apt-get update
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -q lftp
+
       - name: Deploy to Sakura Internet via LFTP
         run: |
-          sudo apt-get install -y lftp
           lftp -c "
             set ftp:ssl-allow yes;
             set ftp:ssl-force yes;
