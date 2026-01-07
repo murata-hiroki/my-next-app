@@ -1,35 +1,33 @@
-"use client";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useParams } from "next/navigation";
-import { getNewsById, getRelatedNews } from "../../data/news";
+import { notFound } from "next/navigation";
+import { newsData, getNewsById, getRelatedNews } from "../../data/news";
 
-const NewsDetailPage = () => {
-  const params = useParams();
-  const id = Number(params.id);
+// 静的エクスポート用：全てのニュースIDを事前生成
+export async function generateStaticParams() {
+  return newsData.map((news) => ({
+    id: String(news.id),
+  }));
+}
 
-  const news = getNewsById(id);
+// メタデータ生成
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const news = getNewsById(Number(id));
+  if (!news) return { title: "記事が見つかりません" };
+  return {
+    title: `${news.title} | 新着情報`,
+    description: news.description,
+  };
+}
+
+const NewsDetailPage = async ({ params }: { params: Promise<{ id: string }> }) => {
+  const { id } = await params;
+  const news = getNewsById(Number(id));
 
   if (!news) {
-    return (
-      <section className="w-full py-16 md:py-24 lg:py-32 bg-slate-50 flex flex-col items-center min-h-screen">
-        <div className="text-center px-4">
-          <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
-            お探しの記事が見つかりません
-          </h1>
-          <p className="text-gray-600 text-base md:text-lg mb-8">
-            指定されたニュースは存在しないか、削除された可能性があります。
-          </p>
-          <Link
-            href="/news"
-            className="border border-black text-black px-6 py-3 rounded-md text-lg hover:bg-black hover:text-white transition-colors duration-200"
-          >
-            新着情報一覧に戻る
-          </Link>
-        </div>
-      </section>
-    );
+    notFound();
   }
 
   // 関連記事（同じカテゴリの他の記事を取得）
@@ -100,7 +98,7 @@ const NewsDetailPage = () => {
             <h2 className="text-xl font-bold mb-6">関連記事</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {relatedNews.map((item) => (
-                <Link key={item.id} href={`/news/${item.id}`}>
+                <Link key={item.id} href={`/news/${item.id}/`}>
                   <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group flex flex-col h-full">
                     <div className="relative w-full aspect-video overflow-hidden">
                       <Image
@@ -127,7 +125,7 @@ const NewsDetailPage = () => {
         {/* ナビゲーションリンク */}
         <div className="flex flex-col sm:flex-row justify-center gap-4 mt-12 pt-8 border-t">
           <Link
-            href="/news"
+            href="/news/"
             className="border border-black text-black px-6 py-3 rounded-md text-center hover:bg-black hover:text-white transition-colors duration-200"
           >
             新着情報一覧に戻る
