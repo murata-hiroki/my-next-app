@@ -26,7 +26,7 @@ jobs:
       - name: Build Next.js
         run: npm run build
 
-      - name: Deploy to Sakura Internet via FTP
+      - name: Deploy to Sakura Internet via FTPS
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
@@ -34,4 +34,5 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./out/
           server-dir: ${{ secrets.FTP_SERVER_DIR }}
-          dangerous-clean-slate: false
+          protocol: ftps
+          port: 21
