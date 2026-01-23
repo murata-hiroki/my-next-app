@@ -17,8 +17,8 @@ const ChairmanMessage = () => {
             style={{ aspectRatio: "3 / 2", width: "90vw", maxWidth: "28rem" }} // アスペクト比対応済み
           >
             <Image
-              src="/president-image.png"
-              alt="理事長 青木陽平"
+              src="/hukayama.jpg"
+              alt="理事長 深山大地"
               fill
               className="object-contain"
               sizes="(max-width: 768px) 90vw, 448px"
@@ -26,15 +26,14 @@ const ChairmanMessage = () => {
             />
           </div>
           <p className="text-gray-700 text-base sm:text-lg mb-6 leading-relaxed text-left">
-            {/* ★ここが変更点です */}
-            松原青年会議所 第55代理事長 青木陽平です。
+            松原青年会議所 第56代理事長 深山大地です。
             <br className="hidden md:block" />
-            今年度のスローガンは「心」を磨き人生を彩るです、地域と共に成長し続けることを大切にしています。
+            今年度のスローガンは「REスタート ～「あれ」がわかる組織へ～」です。
             <br className="hidden md:block" />
-            計画性をもって時間を活かす大切さを考え、目的や信念を共有し、結束力が高い組織体を作り頑張ってまいります
+            「楽しむ気持ち」が導く挑戦の熱量と、「コミュニケーション」がもたらす意識の統一を原動力として、明るい豊かな社会の実現に向けて邁進してまいります。
           </p>
           <div className="mt-2">
-            <Link href="/president-message" passHref>
+            <Link href="/greeting" passHref>
               <button className="bg-primary-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-md text-base sm:text-lg font-bold">
                 理事長所信を読む
               </button>
@@ -50,14 +49,14 @@ const ChairmanMessage = () => {
               理事長紹介
             </h2>
             <p className="text-gray-700 text-lg md:text-xl mb-6 leading-relaxed text-left">
-              松原青年会議所 第55代理事長 青木陽平です。
+              松原青年会議所 第56代理事長 深山大地です。
               <br />
-              今年度のスローガンは「心」を磨き人生を彩るです、地域と共に成長し続けることを大切にしています。
+              今年度のスローガンは「REスタート ～「あれ」がわかる組織へ～」です。
               <br />
-              計画性をもって時間を活かす大切さを考え、目的や信念を共有し、結束力が高い組織体を作り頑張ってまいります
+              「楽しむ気持ち」が導く挑戦の熱量と、「コミュニケーション」がもたらす意識の統一を原動力として、明るい豊かな社会の実現に向けて邁進してまいります。
             </p>
             <div className="mt-2">
-              <Link href="/president-message" passHref>
+              <Link href="/greeting" passHref>
                 <button className="bg-primary-600 text-white px-8 py-4 rounded-md text-lg md:text-xl font-bold">
                   理事長所信を読む
                 </button>
@@ -70,8 +69,8 @@ const ChairmanMessage = () => {
               style={{ aspectRatio: "3 / 2", width: "32rem", maxWidth: "100%" }} // アスペクト比対応済み
             >
               <Image
-                src="/president-image.png"
-                alt="理事長 青木陽平"
+                src="/hukayama.jpg"
+                alt="理事長 深山大地"
                 fill
                 className="object-contain"
                 sizes="512px"

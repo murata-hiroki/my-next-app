@@ -18,7 +18,7 @@ const Footer = () => {
               地域社会と共に成長し、未来を創造します。
             </p>
             <div className="mt-4 flex flex-col sm:flex-row gap-4">
-              <Link href="/details" passHref>
+              <Link href="/about" passHref>
                 <button className="bg-primary-600 text-white px-6 py-3 rounded-md text-base sm:text-lg font-bold w-full sm:w-auto">
                   詳細
                 </button>
@@ -61,13 +61,13 @@ const Footer = () => {
             </div>
             <div>
               <Link
-                href="/members"
+                href="/about"
                 className="block text-gray-700 hover:text-black"
               >
                 メンバー募集
               </Link>
               <Link
-                href="/president"
+                href="/greeting"
                 className="block text-gray-700 hover:text-black"
               >
                 理事長紹介

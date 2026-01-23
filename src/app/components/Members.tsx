@@ -15,106 +15,154 @@ import {
 const Members = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
 
-  // メンバーデータ
+  // 2026年度メンバーデータ
+  // hasDetailPage: true のメンバーのみ詳細ページへのリンクが有効
   const allMembers = [
     {
-      id: "aoki",
-      name: "青木 陽平",
+      id: "fukayama",
+      name: "深山 大地",
       role: "理事長",
       category: "executives",
       message:
-        "2025年度理事長として、「心を磨き 人生を彩る」をスローガンに、持続可能な社会の実現に向けて活動しています。",
+        "2026年度理事長として、「REスタート ～「あれ」がわかる組織へ～」をスローガンに、楽しむ気持ちとコミュニケーションを原動力として活動しています。",
+      avatar: "/hukayama.jpg",
+      profileUrl: "/greeting",
+      hasDetailPage: true,
+    },
+    {
+      id: "aoki",
+      name: "青木 陽平",
+      role: "直前理事長",
+      category: "executives",
       avatar: "/aoki2.jpg",
       profileUrl: "/members/aoki",
-    },
-    {
-      id: "katou",
-      name: "加藤 満久",
-      role: "専務理事",
-      category: "executives",
-      avatar: "/kato.jpg",
-      profileUrl: "/members/katou",
-    },
-    {
-      id: "nishida",
-      name: "西田 裕信",
-      role: "副理事長",
-      category: "executives",
-      avatar: "/nishida.jpg",
-      profileUrl: "/members/nishida",
-    },
-    {
-      id: "ban",
-      name: "伴 俊秀",
-      role: "副理事長",
-      category: "executives",
-      avatar: "/ban.jpg",
-      profileUrl: "/members/ban",
+      hasDetailPage: false,
     },
     {
       id: "kishi",
       name: "岸 航平",
-      role: "副理事長",
+      role: "専務理事",
       category: "executives",
-      avatar: "/kishi.jpg",
+      avatar: "/no_image.png",
       profileUrl: "/members/kishi",
+      hasDetailPage: false,
+    },
+    {
+      id: "katou",
+      name: "加藤 満久",
+      role: "副理事長（ウェルビーイング推進室）",
+      category: "executives",
+      avatar: "/no_image.png",
+      profileUrl: "/members/katou",
+      hasDetailPage: false,
     },
     {
       id: "murata",
       name: "村田 拓輝",
-      role: "副専務理事",
+      role: "副理事長（環境改善室）",
       category: "executives",
-      avatar: "/murata.jpg",
+      avatar: "/murata.jpeg",
       profileUrl: "/members/murata",
+      hasDetailPage: true,
     },
     {
-      id: "nakajima",
-      name: "中島 慎",
-      role: "会員開発・拡大委員会委員長",
-      category: "executives",
-      avatar: "/nakajima.jpg",
-      profileUrl: "/members/nakajima",
+      id: "ban",
+      name: "伴 俊秀",
+      role: "監事",
+      category: "auditor",
+      avatar: "/no_image.png",
+      profileUrl: "/members/ban",
+      hasDetailPage: false,
     },
     {
-      id: "hayase",
-      name: "早瀬 直哉",
-      role: "55周年記念特別委員会委員長",
+      id: "satou",
+      name: "佐藤 將",
+      role: "監事",
+      category: "auditor",
+      avatar: "/no_image.png",
+      profileUrl: "/members/satou",
+      hasDetailPage: false,
+    },
+    {
+      id: "kawada",
+      name: "河田 美弥",
+      role: "青少年育成委員会 委員長",
       category: "executives",
-      avatar: "/hayase.jpg",
-      profileUrl: "/members/hayase",
+      avatar: "/no_image.png",
+      profileUrl: "/members/kawada",
+      hasDetailPage: false,
+    },
+    {
+      id: "wada",
+      name: "和田 貴士",
+      role: "市民まつり・会員拡大委員会 委員長",
+      category: "executives",
+      avatar: "/no_image.png",
+      profileUrl: "/members/wada",
+      hasDetailPage: false,
+    },
+    {
+      id: "fujimoto",
+      name: "藤本 貴一",
+      role: "理事",
+      category: "executives",
+      avatar: "/no_image.png",
+      profileUrl: "/members/fujimoto",
+      hasDetailPage: false,
     },
     {
       id: "hinoi",
       name: "樋井 香陽",
-      role: "青少年育成員会委員長",
+      role: "理事",
       category: "executives",
-      avatar: "/hinoi.jpg",
+      avatar: "/no_image.png",
       profileUrl: "/members/hinoi",
+      hasDetailPage: false,
     },
     {
-      id: "fukayama",
-      name: "深山 大地",
-      role: "まつり・広報発信委員会委員長",
-      category: "executives",
-      avatar: "/fukayama.jpg",
-      profileUrl: "/members/fukayama",
+      id: "shibuya",
+      name: "渋谷 知世",
+      role: "青少年育成委員会 委員",
+      category: "committee",
+      avatar: "/no_image.png",
+      profileUrl: "/members/shibuya",
+      hasDetailPage: false,
     },
     {
-      id: "nomura",
-      name: "野村 将一",
-      role: "特別顧問",
-      category: "executives",
-      avatar: "/nomura.jpg",
-      profileUrl: "/members/nomura",
+      id: "hayase",
+      name: "早瀬 直哉",
+      role: "青少年育成委員会 委員",
+      category: "committee",
+      avatar: "/no_image.png",
+      profileUrl: "/members/hayase",
+      hasDetailPage: false,
     },
     {
-      id: "nakamura",
-      name: "中村 直樹",
-      role: "監事",
-      category: "auditor",
-      avatar: "/avatars/nakamura.png",
-      isOnline: true,
-      profileUrl: "/members/nakamura",
+      id: "ooki",
+      name: "大機 良介",
+      role: "青少年育成委員会 委員",
+      category: "committee",
+      avatar: "/no_image.png",
+      profileUrl: "/members/ooki",
+      hasDetailPage: false,
+    },
+    {
+      id: "otomo",
+      name: "大伴 喜信",
+      role: "市民まつり・会員拡大委員会 委員",
+      category: "committee",
+      avatar: "/no_image.png",
+      profileUrl: "/members/otomo",
+      hasDetailPage: false,
+    },
+    {
+      id: "tsuruno",
+      name: "靏野 沙也",
+      role: "市民まつり・会員拡大委員会 委員",
+      category: "committee",
+      avatar: "/no_image.png",
+      profileUrl: "/members/tsuruno",
+      hasDetailPage: false,
     },
   ];
 
@@ -129,13 +177,58 @@ const Members = () => {
   // フィルタリング
   const filteredMembers =
     selectedCategory === "all"
-      ? allMembers.filter((m) => m.id !== "aoki") // 理事長以外
+      ? allMembers.filter((m) => m.id !== "fukayama") // 理事長以外
       : allMembers.filter(
-          (m) => m.category === selectedCategory && m.id !== "aoki"
+          (m) => m.category === selectedCategory && m.id !== "fukayama"
         );
 
   // 理事長データ
-  const president = allMembers.find((m) => m.id === "aoki");
+  const president = allMembers.find((m) => m.id === "fukayama");
+
+  // メンバーカードコンポーネント
+  const MemberCard = ({ member }: { member: (typeof allMembers)[0] }) => {
+    const cardContent = (
+      <div className="bg-white rounded-xl p-5 sm:p-6 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100">
+        <div className="relative w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4">
+          <Image
+            src={member.avatar}
+            alt={member.name}
+            fill
+            className="rounded-full object-cover group-hover:scale-110 transition-transform duration-300"
+          />
+        </div>
+        <h4 className="font-bold text-gray-900 mb-1 text-sm sm:text-base">
+          {member.name}
+        </h4>
+        <p className="text-xs sm:text-sm text-primary-600 font-medium">
+          {member.role}
+        </p>
+
+        {/* リンクがあるメンバーのみホバー時に表示 */}
+        {member.hasDetailPage && (
+          <div className="mt-3 opacity-0 group-hover:opacity-100 transition-opacity">
+            <span className="inline-flex items-center gap-1 text-xs text-gray-500">
+              プロフィールを見る
+              <ExternalLink size={12} />
+            </span>
+          </div>
+        )}
+      </div>
+    );
+
+    if (member.hasDetailPage) {
+      return (
+        <Link
+          href={member.profileUrl}
+          className="group cursor-pointer"
+        >
+          {cardContent}
+        </Link>
+      );
+    }
+
+    return <div className="group">{cardContent}</div>;
+  };
 
   return (
     <section className="w-full py-20 bg-gradient-to-b from-white to-gray-50">
@@ -152,7 +245,7 @@ const Members = () => {
           </p>
         </div>
 
-        {/* 理事長の特別枠 - ヒーローカード（全体がクリック可能） */}
+        {/* 理事長の特別枠 - ヒーローカード */}
         {president && (
           <div className="mb-20">
             <Link href={president.profileUrl} className="block group">
@@ -172,15 +265,12 @@ const Members = () => {
                           className="rounded-full object-cover border-4 border-white shadow-2xl group-hover:scale-105 transition-transform duration-300"
                           priority
                         />
-                        {president.isOnline && (
-                          <div className="absolute bottom-2 right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white"></div>
-                        )}
                       </div>
                     </div>
                   </div>
                   <div className="md:w-2/3 p-8 md:p-12">
                     <span className="inline-block px-4 py-1.5 bg-primary-100 text-primary-700 rounded-full text-sm font-bold mb-4">
-                      {president.role}
+                      第56代 {president.role}
                     </span>
                     <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
                       {president.name}
@@ -190,7 +280,7 @@ const Members = () => {
                     </p>
                     <div className="flex items-center gap-2 text-primary-600 group-hover:text-primary-700 transition-colors">
                       <span className="text-sm font-medium">
-                        プロフィールを見る
+                        理事長所信を見る
                       </span>
                       <ExternalLink size={16} />
                     </div>
@@ -252,39 +342,7 @@ const Members = () => {
           {/* メンバーグリッド */}
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
             {filteredMembers.map((member) => (
-              <Link
-                key={member.id}
-                href={member.profileUrl}
-                className="group cursor-pointer"
-              >
-                <div className="bg-white rounded-xl p-5 sm:p-6 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100">
-                  <div className="relative w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4">
-                    <Image
-                      src={member.avatar}
-                      alt={member.name}
-                      fill
-                      className="rounded-full object-cover group-hover:scale-110 transition-transform duration-300"
-                    />
-                    {member.isOnline && (
-                      <div className="absolute -bottom-1 -right-1 w-5 h-5 sm:w-6 sm:h-6 bg-green-500 rounded-full border-2 border-white"></div>
-                    )}
-                  </div>
-                  <h4 className="font-bold text-gray-900 mb-1 text-sm sm:text-base">
-                    {member.name}
-                  </h4>
-                  <p className="text-xs sm:text-sm text-primary-600 font-medium">
-                    {member.role}
-                  </p>
-
-                  {/* ホバー時のみ表示 */}
-                  <div className="mt-3 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <span className="inline-flex items-center gap-1 text-xs text-gray-500">
-                      プロフィールを見る
-                      <ExternalLink size={12} />
-                    </span>
-                  </div>
-                </div>
-              </Link>
+              <MemberCard key={member.id} member={member} />
             ))}
           </div>
 

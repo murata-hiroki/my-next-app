@@ -48,7 +48,7 @@ export const newsData: NewsItem[] = [
       
       <p>多くの方のご参加をお待ちしております。ご不明な点がございましたら、お気軽にお問い合わせください。</p>
     `,
-    author: "青木陽平",
+    author: "深山大地",
     date: "2023年11月15日",
     year: "2023",
     readTime: "3分で読める",

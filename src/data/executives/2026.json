@@ -1,0 +1,108 @@
+{
+  "year": 2026,
+  "totalMembers": 13,
+  "boardMembers": 9,
+  "president": {
+    "position": "理事長",
+    "name": "深山 大地",
+    "image": "/hukayama.jpg"
+  },
+  "immediateFormerPresident": {
+    "position": "直前理事長",
+    "name": "青木 陽平",
+    "image": ""
+  },
+  "secretaryGeneral": {
+    "position": "専務理事",
+    "name": "岸 航平",
+    "image": ""
+  },
+  "vicePresidents": [
+    {
+      "position": "副理事長",
+      "department": "ウェルビーイング推進室",
+      "name": "加藤 満久",
+      "image": ""
+    },
+    {
+      "position": "副理事長",
+      "department": "環境改善室",
+      "name": "村田 拓輝",
+      "image": ""
+    }
+  ],
+  "auditors": [
+    {
+      "position": "監事",
+      "name": "伴 俊秀",
+      "image": ""
+    },
+    {
+      "position": "監事",
+      "name": "佐藤 將",
+      "image": ""
+    }
+  ],
+  "boardOfDirectors": [
+    { "name": "青木 陽平", "role": "直前理事長" },
+    { "name": "藤本 貴一", "role": "理事" },
+    { "name": "樋井 香陽", "role": "理事" },
+    { "name": "加藤 満久", "role": "副理事長" },
+    { "name": "村田 拓輝", "role": "副理事長" },
+    { "name": "和田 貴士", "role": "委員長" },
+    { "name": "河田 美弥", "role": "委員長" },
+    { "name": "岸 航平", "role": "専務理事" }
+  ],
+  "departments": [
+    {
+      "name": "ウェルビーイング推進室",
+      "vicePresident": "加藤 満久",
+      "committees": [
+        {
+          "name": "青少年育成委員会",
+          "chairperson": {
+            "position": "委員長",
+            "name": "河田 美弥",
+            "image": ""
+          },
+          "members": [
+            { "position": "委員", "name": "渋谷 知世", "image": "" },
+            { "position": "委員", "name": "早瀬 直哉", "image": "" },
+            { "position": "委員", "name": "大機 良介", "image": "" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "環境改善室",
+      "vicePresident": "村田 拓輝",
+      "committees": [
+        {
+          "name": "市民まつり・会員拡大委員会",
+          "chairperson": {
+            "position": "委員長",
+            "name": "和田 貴士",
+            "image": ""
+          },
+          "members": [
+            { "position": "委員", "name": "大伴 喜信", "image": "" },
+            { "position": "委員", "name": "靏野 沙也", "image": "" }
+          ]
+        }
+      ]
+    }
+  ],
+  "specialCommittees": [
+    {
+      "name": "会員選考委員会",
+      "chairperson": {
+        "position": "委員長",
+        "name": "和田 貴士",
+        "image": ""
+      },
+      "members": [
+        { "position": "委員", "name": "岸 航平", "image": "" }
+      ]
+    }
+  ]
+}

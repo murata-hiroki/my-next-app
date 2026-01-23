@@ -1,0 +1,71 @@
+{
+  "name": "一般社団法人松原青年会議所",
+  "nameShort": "松原青年会議所",
+  "nameEn": "Matsubara Junior Chamber International",
+  "foundedYear": 1970,
+  "currentYear": 2026,
+  "anniversary": 56,
+  "memberCount": 13,
+  "boardMemberCount": 9,
+  "slogan": {
+    "main": "REスタート",
+    "sub": "「あれ」がわかる組織へ"
+  },
+  "basicPolicies": [
+    "「あれ」で動き出す強固なアライメント",
+    "楽しむ気持ちが導く挑戦",
+    "成長を確約するプログラムの推進",
+    "「生きる力」を育む未来への投資"
+  ],
+  "organizationalPolicies": [
+    {
+      "title": "環境改善委員会の設置",
+      "description": "市民まつりをはじめ内部環境を根深く改善できる運営協力を行います。"
+    },
+    {
+      "title": "ウェルビーイング推進委員会の設置",
+      "description": "「生きる力」を育み、未来に繋がる事業の構築を行い、その未来の子どもたちも喜んで頂ける継続事業運営協力を行います。"
+    }
+  ],
+  "departments": [
+    {
+      "name": "ウェルビーイング推進室",
+      "committees": [
+        {
+          "name": "青少年育成委員会",
+          "chairperson": "河田 美弥",
+          "members": ["渋谷 知世", "早瀬 直哉", "大機 良介"]
+        }
+      ]
+    },
+    {
+      "name": "環境改善室",
+      "committees": [
+        {
+          "name": "市民まつり・会員拡大委員会",
+          "chairperson": "和田 貴士",
+          "members": ["大伴 喜信", "靏野 沙也"]
+        }
+      ]
+    }
+  ],
+  "specialCommittees": [
+    {
+      "name": "会員選考委員会",
+      "chairperson": "和田 貴士",
+      "members": ["岸 航平"]
+    }
+  ],
+  "contact": {
+    "address": "",
+    "tel": "",
+    "email": "",
+    "website": ""
+  },
+  "socialMedia": {
+    "facebook": "",
+    "instagram": "",
+    "twitter": "",
+    "youtube": ""
+  }
+}

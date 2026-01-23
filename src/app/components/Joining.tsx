@@ -16,7 +16,7 @@ const Joining = () => {
           私たちと一緒に地域貢献の活動を始めませんか？入会案内をご覧ください。
         </p>
         <div className="flex flex-col sm:flex-row gap-4 sm:justify-center">
-          <Link href="/details" passHref>
+          <Link href="/about" passHref>
             <button className="bg-primary-600 text-white px-6 py-3 rounded-md text-base sm:text-lg font-bold w-full sm:w-auto">
               詳細
             </button>

@@ -1,353 +1,410 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
+import {
+  Users,
+  TrendingUp,
+  Heart,
+  Sparkles,
+  ChevronRight,
+  ChevronDown,
+  Mail,
+  Phone,
+} from "lucide-react";
 
-const activities = [
+// ページ内ナビゲーション
+const navItems = [
+  { id: "about", label: "JCとは？" },
+  { id: "benefits", label: "入会メリット" },
+  { id: "requirements", label: "入会要項" },
+  { id: "flow", label: "入会の流れ" },
+  { id: "faq", label: "よくある質問" },
+];
+
+// 入会メリット
+const benefits = [
   {
-    title: "地域健康教室の運営補助",
-    detail:
-      "食育や生活習慣病予防講座で受付・会場準備・参加者サポートを行います。",
+    icon: TrendingUp,
+    title: "圧倒的な自己成長",
+    description:
+      "プロジェクトリーダー、イベント企画、組織運営...。普段の仕事では経験できない「挑戦の場」があなたを待っています。ここで培ったスキルは、必ず本業でも活きてきます。",
+    color: "bg-blue-500",
+    image: "/join_1.jpeg",
   },
   {
-    title: "相談窓口の資料作成",
-    detail:
-      "専門スタッフの指示のもと、パンフレットやオンライン資料を整備します。",
+    icon: Users,
+    title: "一生モノの仲間",
+    description:
+      "経営者、会社員、士業、クリエイター...。普段なら出会えない多様なメンバーと本気で語り合い、汗を流す。その経験から生まれる絆は、一生の財産になります。",
+    color: "bg-green-500",
+    image: "/join_2.jpeg",
   },
   {
-    title: "イベント記録と広報",
-    detail:
-      "活動の様子を撮影し、レポート制作やSNS投稿の下書きを担当します。",
+    icon: Heart,
+    title: "「ありがとう」が聞けるまちづくり",
+    description:
+      "自分たちで企画したイベントで、子どもたちの笑顔が生まれる。地域の人から「ありがとう」と言われる。そんな体験が、あなたの人生に新しい意味を与えてくれます。",
+    color: "bg-red-500",
+    image: "/join_3.jpeg",
   },
   {
-    title: "子ども向けワークショップ",
-    detail:
-      "アニメ調ツールを使い、楽しく学べるレクチャーの補助を行います。",
+    icon: Sparkles,
+    title: "40歳までの「特別な時間」",
+    description:
+      "JCは40歳で卒業。だからこそ、この期間は特別です。同世代の仲間と全力で駆け抜ける経験は、人生のかけがえのない1ページになります。",
+    color: "bg-purple-500",
+    image: "/join_4.jpeg",
   },
 ];
 
-const conditions = [
-  { label: "活動頻度", value: "月2回以上（1回あたり2〜3時間）" },
-  { label: "活動エリア", value: "大阪府松原市および近郊の公共施設" },
-  { label: "対象", value: "18歳以上。職業・経験は問いません" },
-  { label: "必要スキル", value: "基本的なPC操作ができれば可" },
-  { label: "初心者", value: "歓迎。導入研修とメンター制度あり" },
-  { label: "サポート", value: "交通費一部支給、ボランティア保険加入" },
+// 入会資格
+const requirements = [
+  { label: "年齢", value: "20歳以上40歳未満の方" },
+  { label: "地域", value: "松原市内または近郊にお住まい、またはお勤めの方" },
+  { label: "職業", value: "不問（会社員、経営者、自営業、士業など）" },
+  { label: "経験", value: "不問（初めての方も歓迎）" },
 ];
 
-const costs = [
-  { label: "年会費", value: "3,000円（事務運営費として）" },
-  { label: "交通費", value: "1回あたり上限1,000円まで支給" },
-  { label: "保険", value: "当法人負担でボランティア保険に加入" },
-  { label: "その他", value: "ユニフォーム貸与。追加費用はありません" },
-];
-
+// 入会の流れ
 const steps = [
   {
-    step: "STEP 1",
-    title: "相談・説明会予約",
-    description:
-      "フォームまたはお電話でご予約ください。オンライン説明も対応します。",
+    step: 1,
+    title: "お問い合わせ",
+    description: "お電話・メール・フォームからお気軽にご連絡ください",
   },
   {
-    step: "STEP 2",
-    title: "個別ヒアリング",
-    description:
-      "希望する活動分野や参加可能日をお伺いし、不安や疑問を解消します。",
+    step: 2,
+    title: "面談",
+    description: "入会についてのご説明と面談を行います",
   },
   {
-    step: "STEP 3",
+    step: 3,
     title: "入会手続き",
-    description:
-      "会費のお支払いと必要書類の提出を行います。事務局が丁寧にサポートします。",
+    description: "入会申込書の提出と入会金・年会費のお支払い",
   },
   {
-    step: "STEP 4",
-    title: "導入研修 → 活動開始",
-    description:
-      "安全研修・現場同行を経て、担当チームに合流します。初日はスタッフが同行。",
+    step: 4,
+    title: "活動スタート",
+    description: "委員会に配属され、いよいよ活動開始！",
   },
 ];
 
+// よくある質問
 const faqs = [
   {
-    question: "平日しか参加できません。大丈夫ですか？",
+    question: "仕事が忙しくても参加できますか？",
     answer:
-      "はい。平日昼間の活動が中心ですが、月数回の夜間・土曜プログラムもございます。ご都合に合わせて調整します。",
+      "はい、大丈夫です。メンバーの多くは仕事をしながら活動しています。例会は月1〜2回、委員会活動も調整可能です。",
   },
   {
-    question: "専門資格がなくても参加できますか？",
+    question: "会費はいくらですか？",
     answer:
-      "医療・福祉の専門資格がなくても大丈夫です。専門領域が必要な場面はスタッフが担当しますのでご安心ください。",
+      "入会金と年会費がかかります。詳細は説明会でご案内しますが、分割払いなども相談可能です。",
   },
   {
-    question: "仕事や子育てと両立できますか？",
+    question: "どんな人が参加していますか？",
     answer:
-      "1回あたり2〜3時間、月2回から参加できます。予定は1か月前に共有し、急な変更にも柔軟に対応します。",
+      "会社員、経営者、自営業、専門職など様々な職業の20〜30代が参加しています。",
   },
   {
-    question: "オンラインでの活動はありますか？",
+    question: "家族がいても大丈夫ですか？",
     answer:
-      "資料作成・広報・事務作業の一部はオンラインで参加できます。説明会もオンライン対応可能です。",
-  },
-  {
-    question: "家族や友人と一緒に参加できますか？",
-    answer:
-      "はい。同時にお申し込みいただければ、同じチームに配属することも可能です。年齢条件のみご確認ください。",
-  },
-  {
-    question: "長期的に続けられるか不安です。",
-    answer:
-      "無理なく続けられるよう、3か月ごとに面談を実施し、役割を調整します。短期参加やお試し参加も歓迎です。",
+      "もちろんです！家族と一緒に参加できるイベントもあり、家族ぐるみの付き合いも生まれています。",
   },
 ];
 
-const OutlineIllustration = () => (
-  <svg
-    viewBox="0 0 320 220"
-    role="img"
-    aria-label="やさしいアニメ調のイラスト"
-    className="h-48 w-full max-w-md text-primary-300"
-  >
-    <rect
-      x="10"
-      y="30"
-      width="300"
-      height="160"
-      rx="24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2.5"
-      strokeDasharray="8 6"
-    />
-    <circle cx="90" cy="110" r="28" fill="none" stroke="currentColor" strokeWidth="2" />
-    <circle cx="200" cy="110" r="36" fill="none" stroke="currentColor" strokeWidth="2" />
-    <path
-      d="M70 150 Q90 170 110 150"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-    />
-    <path
-      d="M170 150 Q200 175 230 150"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-    />
-    <rect
-      x="140"
-      y="60"
-      width="40"
-      height="20"
-      rx="10"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-    />
-    <rect
-      x="60"
-      y="60"
-      width="50"
-      height="20"
-      rx="10"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-    />
-    <rect
-      x="210"
-      y="60"
-      width="50"
-      height="20"
-      rx="10"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-    />
-  </svg>
-);
+export default function JoinPage() {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
-export default function VolunteerPage() {
   return (
-    <div className="bg-gray-50 text-gray-900">
-      <section className="border-b border-gray-200 bg-white">
-        <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-16 lg:flex-row lg:items-center">
-          <div className="space-y-6 lg:w-3/5">
-            <p className="text-sm font-semibold text-primary-600 tracking-[0.3em] uppercase">
-              Volunteer Recruitment
-            </p>
-            <h1 className="text-3xl font-semibold leading-tight text-gray-900 sm:text-4xl">
-              一般社団法人〇〇協議会
+    <div className="bg-white">
+      {/* ヒーローセクション */}
+      <section className="relative">
+        {/* ヒーロー画像 */}
+        <div className="w-full">
+          <Image
+            src="/mv_join.png"
+            alt="松原青年会議所メンバー"
+            width={1920}
+            height={800}
+            className="w-full h-auto"
+            priority
+          />
+        </div>
+
+        {/* ページ内ナビゲーション */}
+        <nav className="bg-primary-600 text-white">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6">
+            <ul className="flex overflow-x-auto">
+              {navItems.map((item) => (
+                <li key={item.id}>
+                  <button
+                    onClick={() => scrollToSection(item.id)}
+                    className="px-4 md:px-6 py-4 text-sm md:text-base font-medium hover:bg-primary-700 transition-colors whitespace-nowrap flex items-center gap-1"
+                  >
+                    {item.label}
+                    <ChevronDown size={16} />
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </nav>
+      </section>
+
+      {/* JCとは */}
+      <section id="about" className="py-16 md:py-24 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="text-center max-w-3xl mx-auto">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-6">
+              青年会議所（JC）とは？
+            </h2>
+            <p className="text-gray-600 text-base md:text-lg leading-relaxed">
+              青年会議所（JC）は、「明るい豊かな社会」の実現を理想とし、
+              志を同じくする20歳から40歳までの青年が集う団体です。
+              全国に約700の地域青年会議所があり、約3万人のメンバーが活動しています。
               <br />
-              ボランティア会員募集
-            </h1>
-            <p className="text-lg leading-relaxed text-gray-700">
-              私たちは、地域の健康支援と暮らしの相談を行う非営利団体です。
-              初めての方でも安心して参加できるよう、丁寧な研修と伴走体制を整えています。
-              「まずは話を聞きたい」「一度見学したい」という方も歓迎です。
+              <br />
+              松原青年会議所は1971年に設立され、50年以上にわたり
+              地域の発展のために様々な活動を行ってきました。
             </p>
-            <div className="flex flex-wrap gap-4">
-              <Link
-                href="/contact"
-                className="rounded-full bg-primary-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-primary-700"
-              >
-                説明会・相談を申し込む
-              </Link>
-              <Link
-                href="/contact"
-                className="rounded-full border border-primary-600 px-6 py-3 text-sm font-semibold text-primary-600"
-              >
-                入会申込フォームへ
-              </Link>
-            </div>
-          </div>
-          <div className="lg:w-2/5">
-            <OutlineIllustration />
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 py-16">
-        <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
-          <div className="space-y-4">
-            <h2 className="text-2xl font-semibold text-gray-900">団体概要</h2>
-            <p className="text-base leading-relaxed text-gray-700">
-              一般社団法人〇〇協議会は、行政・医療機関・市民団体と連携し、
-              生活支援や健康づくりを推進しています。年間100件以上の相談対応と、
-              住民参加型の講座・イベントを展開しています。
+      {/* 入会メリット */}
+      <section id="benefits" className="py-16 md:py-24">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">
+              入会メリット
+            </h2>
+            <p className="text-gray-600 text-lg">
+              20代・30代の「今」だからこそ得られる、かけがえのない経験がここにあります
             </p>
-            <ul className="space-y-2 text-gray-700">
-              <li className="flex gap-2">
-                <span className="text-primary-600">•</span>
-                地域ケアの情報共有と相談支援
-              </li>
-              <li className="flex gap-2">
-                <span className="text-primary-600">•</span>
-                健康づくり教室・子ども向けワークショップの実施
-              </li>
-              <li className="flex gap-2">
-                <span className="text-primary-600">•</span>
-                災害時の生活サポートネットワーク整備
-              </li>
-            </ul>
           </div>
-          <div className="rounded-2xl border border-gray-200 bg-white p-6">
-            <h3 className="text-lg font-semibold text-gray-900">ボランティア会員でできること</h3>
-            <p className="mt-2 text-sm text-gray-600">
-              活動例を一部ご紹介します。得意分野やライフスタイルに合わせて調整可能です。
-            </p>
-            <ul className="mt-6 space-y-4">
-              {activities.map((activity) => (
-                <li key={activity.title} className="border-b border-dashed border-gray-200 pb-4 last:border-b-0">
-                  <p className="text-sm font-semibold text-primary-700">{activity.title}</p>
-                  <p className="text-sm text-gray-600">{activity.detail}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
 
-      <section className="border-t border-b border-gray-200 bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-16">
-          <h2 className="text-2xl font-semibold text-gray-900">参加条件</h2>
-          <div className="mt-8 grid gap-6 md:grid-cols-2">
-            {conditions.map((item) => (
-              <div key={item.label} className="space-y-1 border-l-2 border-primary-200 pl-4">
-                <p className="text-xs uppercase tracking-[0.3em] text-primary-600">{item.label}</p>
-                <p className="text-base text-gray-800">{item.value}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-6xl px-6 py-16">
-        <div className="grid gap-8 lg:grid-cols-2">
-          <div>
-            <h2 className="text-2xl font-semibold text-gray-900">費用について</h2>
-            <p className="mt-3 text-gray-600">
-              ボランティア活動に必要な費用は、できる限り法人が負担します。
-              不明点は申込時にご案内いたします。
-            </p>
-            <dl className="mt-8 space-y-4">
-              {costs.map((cost) => (
-                <div key={cost.label} className="flex flex-col border-b border-gray-200 pb-4 last:border-b-0 last:pb-0">
-                  <dt className="text-sm font-semibold text-gray-700">{cost.label}</dt>
-                  <dd className="text-base text-gray-900">{cost.value}</dd>
+          <div className="space-y-12">
+            {benefits.map((benefit, index) => {
+              const Icon = benefit.icon;
+              const isEven = index % 2 === 0;
+              return (
+                <div
+                  key={index}
+                  className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 items-center`}
+                >
+                  {benefit.image ? (
+                    <div className="relative w-full lg:w-1/2 aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+                      <Image
+                        src={benefit.image}
+                        alt={benefit.title}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  ) : (
+                    <div className={`w-full lg:w-1/2 aspect-[4/3] rounded-2xl flex items-center justify-center ${benefit.color}`}>
+                      <Icon size={120} className="text-white" />
+                    </div>
+                  )}
+                  <div className="w-full lg:w-1/2 space-y-4">
+                    <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
+                      {benefit.title}
+                    </h3>
+                    <p className="text-gray-600 text-lg leading-relaxed">{benefit.description}</p>
+                  </div>
                 </div>
-              ))}
-            </dl>
-          </div>
-          <div className="rounded-2xl border border-gray-200 bg-white p-6">
-            <h3 className="text-lg font-semibold text-gray-900">入会までの流れ</h3>
-            <ol className="mt-6 space-y-5">
-              {steps.map((step) => (
-                <li key={step.title} className="flex gap-4">
-                  <div className="text-xs font-semibold uppercase tracking-[0.3em] text-primary-600">
-                    {step.step}
-                  </div>
-                  <div>
-                    <p className="font-semibold text-gray-900">{step.title}</p>
-                    <p className="text-sm text-gray-600">{step.description}</p>
-                  </div>
-                </li>
-              ))}
-            </ol>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      <section className="border-t border-gray-200 bg-white">
-        <div className="mx-auto max-w-6xl px-6 py-16">
-          <h2 className="text-2xl font-semibold text-gray-900">よくある質問</h2>
-          <div className="mt-10 space-y-6">
-            {faqs.map((faq) => (
-              <div key={faq.question} className="border-b border-gray-200 pb-6 last:border-b-0 last:pb-0">
-                <p className="text-base font-semibold text-primary-700">{faq.question}</p>
-                <p className="mt-2 text-sm leading-relaxed text-gray-700">{faq.answer}</p>
+      {/* 入会要項 */}
+      <section id="requirements" className="py-16 md:py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          {/* セクションタイトル */}
+          <div className="flex items-center gap-3 mb-12">
+            <div className="w-0 h-0 border-t-[12px] border-t-transparent border-b-[12px] border-b-transparent border-l-[20px] border-l-primary-600"></div>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+              入会要項
+            </h2>
+          </div>
+
+          {/* 入会資格 */}
+          <div className="mb-10">
+            <h3 className="text-xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-300">
+              入会資格
+            </h3>
+            <ul className="list-disc list-inside text-gray-700 space-y-1">
+              <li>松原市内及びその周辺の地域に居住または勤務し、申込時の年令が満20才以上40才未満の方です。</li>
+            </ul>
+          </div>
+
+          {/* 入会必要書類 */}
+          <div className="mb-10">
+            <h3 className="text-xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-300">
+              入会必要書類
+            </h3>
+            <ul className="list-disc list-inside text-gray-700 space-y-2">
+              <li>入会申込書 1通<br />
+                <span className="text-sm text-gray-500 ml-5">※自署の上、捺印（シャチハタ除く）し戸籍上の氏名を記入</span>
+              </li>
+              <li>写真台帳 1通</li>
+              <li>証明写真 2枚<br />
+                <span className="text-sm text-gray-500 ml-5">※5cm×5cmで入会申込前3か月以内に撮影された写真</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* 入会要件 */}
+          <div className="mb-10">
+            <h3 className="text-xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-300">
+              入会要件
+            </h3>
+            <p className="text-gray-700">
+              入会希望者は当会議所の定める会議・事業に参加し、所定の審査要件を満たすことにより、入会審査を受けることができます。
+            </p>
+          </div>
+
+          {/* 入会費用 */}
+          <div className="mb-10">
+            <h3 className="text-xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-300">
+              入会費用
+            </h3>
+            <table className="w-full border border-gray-300">
+              <tbody>
+                <tr className="border-b border-gray-300">
+                  <th className="bg-gray-100 px-4 py-3 text-left font-bold text-gray-900 w-1/3">入会金</th>
+                  <td className="px-4 py-3 text-right text-gray-700">30,000円</td>
+                </tr>
+                <tr>
+                  <th className="bg-gray-100 px-4 py-3 text-left font-bold text-gray-900">年会費</th>
+                  <td className="px-4 py-3 text-right text-gray-700">120,000円</td>
+                </tr>
+              </tbody>
+            </table>
+            <p className="text-sm text-gray-500 mt-2">※入会金については入会時のみ必要です。</p>
+            <p className="text-sm text-gray-500">※年会費は月割りでのお支払いも可能です。詳しくはお問い合わせください。</p>
+          </div>
+
+        </div>
+      </section>
+
+      {/* 入会の流れ */}
+      <section id="flow" className="py-16 md:py-20 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          {/* セクションタイトル */}
+          <div className="flex items-center gap-3 mb-12">
+            <div className="w-0 h-0 border-t-[12px] border-t-transparent border-b-[12px] border-b-transparent border-l-[20px] border-l-primary-600"></div>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+              入会の流れ
+            </h2>
+          </div>
+
+          {/* フローチャート */}
+          <div className="space-y-0">
+            {steps.map((step, index) => (
+              <div key={index}>
+                {/* ステップボックス */}
+                <div className="bg-primary-600 text-white p-6 rounded-lg">
+                  <div className="flex items-center gap-4">
+                    <div className="flex-shrink-0 w-12 h-12 bg-white text-primary-600 rounded-full flex items-center justify-center font-bold text-xl">
+                      {step.step}
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold">{step.title}</h3>
+                      <p className="text-primary-100 text-sm mt-1">{step.description}</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 矢印 */}
+                {index < steps.length - 1 && (
+                  <div className="flex justify-center py-2">
+                    <div className="w-0 h-0 border-l-[20px] border-l-transparent border-r-[20px] border-r-transparent border-t-[24px] border-t-primary-600"></div>
+                  </div>
+                )}
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-6 py-16">
-        <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
-          <div className="space-y-4 rounded-2xl border border-gray-200 bg-white p-6">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary-600">
-              Contact &amp; Entry
-            </p>
-            <h2 className="text-2xl font-semibold text-gray-900">申込・お問い合わせ</h2>
-            <p className="text-gray-700">
-              少しでも興味をお持ちいただけたら、まずはお気軽にご相談ください。
-              オンライン・対面どちらも対応しております。
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Link
-                href="/contact"
-                className="rounded-full bg-primary-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-primary-700"
+      {/* よくある質問 */}
+      <section id="faq" className="py-16 md:py-24 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">
+              よくある質問
+            </h2>
+          </div>
+
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-xl overflow-hidden shadow-sm"
               >
-                説明会を予約する
-              </Link>
-              <Link
-                href="/contact"
-                className="rounded-full border border-primary-600 px-6 py-3 text-sm font-semibold text-primary-600"
-              >
-                そのまま入会申込
-              </Link>
+                <div className="p-6">
+                  <h3 className="text-lg font-bold text-gray-900 flex items-start gap-3 mb-3">
+                    <span className="bg-primary-600 text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 text-sm">
+                      Q
+                    </span>
+                    {faq.question}
+                  </h3>
+                  <div className="flex items-start gap-3 pl-11">
+                    <p className="text-gray-600">{faq.answer}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-16 md:py-24 bg-primary-600">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+          <h2 className="text-2xl md:text-4xl font-bold text-white mb-6">
+            まずはお気軽にご連絡ください
+          </h2>
+          <p className="text-primary-100 text-lg mb-8 max-w-2xl mx-auto">
+            「話を聞いてみたい」「見学だけしたい」など、
+            どんなことでもお気軽にお問い合わせください。
+          </p>
+
+          {/* 連絡先 */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <div className="bg-white/10 backdrop-blur rounded-xl px-6 py-4 flex items-center gap-3">
+              <Phone className="text-white" size={24} />
+              <div className="text-left">
+                <p className="text-primary-100 text-xs">お電話でのお問い合わせ</p>
+                <p className="text-white font-bold text-lg">072-333-0222</p>
+              </div>
             </div>
-            <div className="text-sm text-gray-600">
-              <p>電話：072-000-0000（平日10:00〜17:00）</p>
-              <p>メール：info@example.or.jp</p>
+            <div className="bg-white/10 backdrop-blur rounded-xl px-6 py-4 flex items-center gap-3">
+              <Mail className="text-white" size={24} />
+              <div className="text-left">
+                <p className="text-primary-100 text-xs">メールでのお問い合わせ</p>
+                <p className="text-white font-bold text-lg">mjc@mjc.ne.jp</p>
+              </div>
             </div>
           </div>
-          <div className="flex flex-col items-center justify-center rounded-2xl border border-dashed border-primary-200 bg-primary-50 p-6 text-center text-sm text-gray-600">
-            <p className="font-semibold text-primary-700">アニメ調イラスト差し替え枠</p>
-            <p>公式キャラクターや活動写真を掲載予定です。</p>
-            <OutlineIllustration />
-          </div>
+
+          <Link
+            href="/contact"
+            className="inline-flex items-center justify-center gap-2 bg-white text-primary-600 px-10 py-5 rounded-full font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg"
+          >
+            Webからお問い合わせ
+            <ChevronRight size={24} />
+          </Link>
         </div>
       </section>
     </div>
