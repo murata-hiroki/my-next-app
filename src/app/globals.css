@@ -44,3 +44,232 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* ニュース記事本文のスタイル */
+.news-content {
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic",
+    "Yu Gothic Medium", "Meiryo", "Noto Sans JP", system-ui, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.95;
+  color: #2d3748;
+  letter-spacing: 0.02em;
+  word-break: break-word;
+}
+
+.news-content > *:first-child {
+  margin-top: 0;
+}
+
+.news-content > *:last-child {
+  margin-bottom: 0;
+}
+
+.news-content p {
+  margin: 0 0 1.6em;
+}
+
+/* リード段落（最初の段落を一回り強く） */
+.news-content > p:first-of-type {
+  font-size: 1.15rem;
+  line-height: 1.95;
+  color: #1f2937;
+  font-weight: 500;
+  margin-bottom: 1.8em;
+  padding-bottom: 1.5em;
+  border-bottom: 1px dashed #e2e8f0;
+}
+
+/* マーカー風ハイライト */
+.news-content strong,
+.news-content b {
+  font-weight: 700;
+  color: #0f172a;
+  background: linear-gradient(transparent 62%, rgba(0, 151, 215, 0.22) 62%);
+  padding: 0 0.08em;
+}
+
+.news-content em,
+.news-content i {
+  font-style: italic;
+}
+
+.news-content h2 {
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1.45;
+  color: #111827;
+  margin: 2.5em 0 1em;
+  padding: 0.3em 0 0.3em 1rem;
+  border-left: 6px solid #0097D7;
+  background: linear-gradient(to right, rgba(0, 151, 215, 0.08), transparent 70%);
+  border-radius: 0 4px 4px 0;
+}
+
+.news-content h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #1f2937;
+  margin: 2em 0 0.8em;
+  padding-left: 1.4em;
+  position: relative;
+}
+
+.news-content h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 0.9em;
+  height: 0.9em;
+  background: linear-gradient(135deg, #0097D7, #007fb4);
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 151, 215, 0.3);
+}
+
+.news-content h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 1.8em 0 0.6em;
+}
+
+.news-content ul,
+.news-content ol {
+  margin: 0 0 1.6em 0;
+  padding: 0 0 0 1.4em;
+}
+
+.news-content ul {
+  list-style: none;
+}
+
+.news-content ul > li {
+  position: relative;
+  padding-left: 0.5em;
+  margin-bottom: 0.6em;
+}
+
+.news-content ul > li::before {
+  content: "";
+  position: absolute;
+  left: -1em;
+  top: 0.85em;
+  width: 0.5em;
+  height: 0.5em;
+  background: #0097D7;
+  border-radius: 50%;
+}
+
+.news-content ol {
+  list-style: decimal;
+}
+
+.news-content ol > li {
+  margin-bottom: 0.6em;
+  padding-left: 0.3em;
+}
+
+.news-content ol > li::marker {
+  color: #0097D7;
+  font-weight: 700;
+}
+
+.news-content li > p {
+  margin: 0 0 0.5em;
+}
+
+.news-content a {
+  color: #0097D7;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+  font-weight: 500;
+}
+
+.news-content a:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.news-content figure {
+  margin: 2.5em auto;
+  text-align: center;
+  /* WordPress 由来の wp-block-image / is-resized などによる幅指定を打ち消す */
+  width: auto !important;
+  max-width: 100% !important;
+}
+
+.news-content figure img,
+.news-content p > img,
+.news-content > img {
+  display: block;
+  width: auto !important;
+  height: auto !important;
+  max-width: min(100%, 720px);
+  max-height: 540px;
+  margin: 0 auto;
+  border-radius: 0.875rem;
+  box-shadow:
+    0 14px 32px -12px rgba(15, 23, 42, 0.25),
+    0 4px 10px -4px rgba(15, 23, 42, 0.1);
+  background: #f3f4f6;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-content figure img:hover,
+.news-content p > img:hover,
+.news-content > img:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 20px 40px -12px rgba(15, 23, 42, 0.32),
+    0 6px 14px -4px rgba(15, 23, 42, 0.18);
+}
+
+.news-content figcaption {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-top: 0.75em;
+  font-style: italic;
+}
+
+.news-content blockquote {
+  margin: 1.8em 0;
+  padding: 1em 1.4em;
+  border-left: 4px solid #0097D7;
+  background: linear-gradient(to right, #f0f9fd, transparent 80%);
+  color: #334155;
+  border-radius: 0 6px 6px 0;
+  position: relative;
+}
+
+.news-content blockquote::before {
+  content: "“";
+  position: absolute;
+  top: -0.2em;
+  left: 0.3em;
+  font-size: 2.5em;
+  color: rgba(0, 151, 215, 0.25);
+  line-height: 1;
+  font-family: Georgia, serif;
+}
+
+.news-content blockquote p {
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.news-content hr {
+  margin: 2.5em 0;
+  border: none;
+  border-top: 1px solid #e5e7eb;
+}
+
+.news-content code {
+  background: #f3f4f6;
+  padding: 0.15em 0.4em;
+  border-radius: 0.25rem;
+  font-size: 0.9em;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
