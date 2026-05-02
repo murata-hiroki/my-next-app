@@ -13,224 +13,504 @@ export type NewsItem = {
   readTime: string;
 };
 
-// 新着情報のデータ
+// 新着情報のデータ（WordPress から移行）
 export const newsData: NewsItem[] = [
   {
-    id: 1,
-    image: "/about-image1.jpg",
-    alt: "地域イベント参加者募集中",
+    id: 1504,
+    image: "/news-images/202507_S__71770264-723x1024.jpg",
+    alt: "🎉 第51回松原市民まつり🎉",
     category: "お知らせ",
-    title: "地域イベント参加者募集中！",
-    description:
-      "地域の皆様と共に楽しむイベントを開催します。多くの方のご参加をお待ちしております。地域の絆を深める絶好の機会です。",
-    content: `
-      <p>この度、松原青年会議所では地域の皆様と共に楽しむイベントを開催することとなりました。</p>
-      
-      <h3>イベント概要</h3>
-      <p>地域の絆を深め、世代を超えた交流を促進するため、様々なプログラムを用意しております。お子様からご年配の方まで、どなたでもお楽しみいただける内容となっております。</p>
-      
-      <h3>開催日時</h3>
-      <p>2023年12月10日（日）10:00〜16:00</p>
-      
-      <h3>開催場所</h3>
-      <p>松原市民ふれあい広場</p>
-      
-      <h3>参加費</h3>
-      <p>無料</p>
-      
-      <h3>プログラム内容</h3>
-      <ul>
-        <li>地元特産品の販売ブース</li>
-        <li>子ども向けワークショップ</li>
-        <li>地域の伝統芸能披露</li>
-        <li>スタンプラリー</li>
-      </ul>
-      
-      <p>多くの方のご参加をお待ちしております。ご不明な点がございましたら、お気軽にお問い合わせください。</p>
-    `,
-    author: "深山大地",
-    date: "2023年11月15日",
-    year: "2023",
+    title: "🎉 第51回松原市民まつり🎉",
+    description: "今年も第51回松原市民まつりが9月6日(土)に開催されます！松原青年会議所がメインに企画・運営をさせていただいております！ <img src=\"https://mjc.ne.jp/wp-content/uploads/2025/07/S__71770264-72",
+    content: `<p>今年も第51回松原市民まつりが9月6日(土)に開催されます！松原青年会議所がメインに企画・運営をさせていただいております！</p>
+
+<figure class="wp-block-image size-large"><img src="/news-images/202507_S__71770264-723x1024.jpg" alt="" class="wp-image-1505"/></figure>
+
+<p>今年のテーマは、「みんなで繋げよう！未来の子どもたちの為に！」</p>
+
+<p>当日は、子どもや大人も楽しめるイベントが盛りだくさん！</p>
+
+<p>✨ 主な見どころ ✨</p>
+
+<p>* 街コンLOVE！💖 25歳〜40歳限定の出会いのイベントも！</p>
+
+<p>* ニンテンドープリベイトカード争奪戦！ 水てっぽう対決で盛り上がろう！🔫　※以下のQRコードからご応募ください</p>
+
+<figure class="wp-block-image size-large"><img src="https://mjc.ne.jp/wp-content/uploads/2025/07/S__71770263-683x1024.png" alt="" class="wp-image-1506"/></figure>
+
+<p>* 豪華賞品GETのチャンス！ 総額30万円のビンゴ大会も開催！1等海外旅行、2等ディズニーペアチケットなど！</p>
+
+<p>* 阪南大学主催のスケートボードイベント 🛹</p>
+
+<p>* 縁日＆屋台 🏮 キッチンカーや食事ブース、縁日遊びも楽しめます！</p>
+
+<p>* ダンスやフラダンスなど地域の魅力ある芸能フェスティバル💃</p>
+
+<p>時間については、12:00〜20:00 (パレードは11:00から12時まで！)</p>
+
+<p>場所: 松原中央公園ほか</p>
+
+<p>ご家族、お友達、みんなで遊びに来てくださいね！<br>思い出に残る一日を一緒に作りましょう！</p>
+
+<p></p>`,
+    author: "松原青年会議所",
+    date: "2025年7月27日",
+    year: "2025",
     readTime: "3分で読める",
   },
   {
-    id: 2,
-    image: "/about-image1.jpg",
-    alt: "新しいメンバーを募集中",
+    id: 1500,
+    image: "/news-images/202507_5db2401af4e00f628f644b83c39c97fd-1024x768.jpg",
+    alt: "7月定例会は異業種交流会！🤝✨",
     category: "お知らせ",
-    title: "新しいメンバーを募集中！",
-    description:
-      "共に地域を盛り上げる仲間を探しています。青年会議所の活動に興味がある方は、ぜひお問い合わせください。",
-    content: `
-      <p>松原青年会議所では、共に地域を盛り上げる新しい仲間を募集しております。</p>
-      
-      <h3>青年会議所とは</h3>
-      <p>青年会議所（JC）は、20歳から40歳までの青年経済人が、社会貢献や自己啓発を目的として活動する団体です。「明るい豊かな社会」の実現を目指し、様々な事業を展開しています。</p>
-      
-      <h3>活動内容</h3>
-      <ul>
-        <li>地域活性化事業</li>
-        <li>青少年育成事業</li>
-        <li>まちづくり事業</li>
-        <li>会員相互の研修・交流</li>
-      </ul>
-      
-      <h3>入会資格</h3>
-      <ul>
-        <li>20歳以上40歳未満の方</li>
-        <li>地域の発展に貢献したいという志のある方</li>
-        <li>松原市内またはその近郊で活動できる方</li>
-      </ul>
-      
-      <h3>お問い合わせ</h3>
-      <p>入会に関するお問い合わせは、当サイトのお問い合わせフォームからお願いいたします。まずはお気軽にご連絡ください。見学も随時受け付けております。</p>
-    `,
-    author: "佐藤健",
-    date: "2023年10月20日",
-    year: "2023",
-    readTime: "4分で読める",
+    title: "7月定例会は異業種交流会！🤝✨",
+    description: "先日、松原青年会議所の7月定例会を開催しました！今回は、メンバーだけでなく、地域からたくさんのオブザーバーの方々にもご参加いただき、異業種交流会を兼ねたスペシャルな会に！🥳 「JCってどんな活動してるの？🤔」そんな疑問にも楽しくお答えできるよう、講師には一般社団法人丹波青年会議所2024年度...",
+    content: `<p>先日、松原青年会議所の<strong>7月定例会</strong>を開催しました！今回は、メンバーだけでなく、地域から<strong>たくさんのオブザーバーの方々</strong>にもご参加いただき、<strong>異業種交流会</strong>を兼ねたスペシャルな会に！🥳</p>
+
+<p>「JCってどんな活動してるの？🤔」そんな疑問にも楽しくお答えできるよう、講師には<strong>一般社団法人丹波青年会議所2024年度ご卒業の石川毅様</strong>をお招きし、熱いご講演をいただきました！👏</p>
+
+<figure class="wp-block-image size-large is-resized"><img src="/news-images/202507_5db2401af4e00f628f644b83c39c97fd-1024x768.jpg" alt="" class="wp-image-1502" style="width:391px;height:auto"/></figure>
+
+<p>講演後の異業種交流会では、テーブルごとに<strong>地域が抱える課題</strong>について「どうすればもっと良くなるだろう？」と真剣かつ和やかに意見交換を行いました。💡 地域を良くするためのアイデアや、JCの魅力について語り合い、あっという間の時間でしたね！😊</p>
+
+<p>肩肘張らずに、地域について語り合える温かい定例会となりました。ご参加くださった皆様、そして石川毅様、本当にありがとうございました！</p>
+
+<figure class="wp-block-image"><img alt=""/></figure>
+
+<p>松原青年会議所は、これからも地域の未来のために、そして新しい仲間との出会いを大切に活動していきます！🙌</p>`,
+    author: "松原青年会議所",
+    date: "2025年7月27日",
+    year: "2025",
+    readTime: "2分で読める",
   },
   {
-    id: 3,
-    image: "/about-image1.jpg",
-    alt: "地域貢献活動のご案内",
-    category: "イベント",
-    title: "地域貢献活動のご案内",
-    description:
-      "地域のための活動に参加しませんか？ボランティア活動を通じて、地域社会に貢献しましょう。",
-    content: `
-      <p>松原青年会議所では、地域貢献活動の一環として清掃ボランティアを実施いたします。</p>
-      
-      <h3>活動概要</h3>
-      <p>地域の美化活動を通じて、住みやすいまちづくりに貢献します。どなたでもご参加いただけますので、ぜひこの機会にご参加ください。</p>
-      
-      <h3>開催日時</h3>
-      <p>2023年10月15日（日）8:00〜11:00</p>
-      
-      <h3>集合場所</h3>
-      <p>松原駅前広場</p>
-      
-      <h3>持ち物</h3>
-      <ul>
-        <li>動きやすい服装</li>
-        <li>軍手（お持ちでない方には貸出あり）</li>
-        <li>飲み物</li>
-        <li>帽子（日差し対策）</li>
-      </ul>
-      
-      <h3>参加申込</h3>
-      <p>事前申込不要です。当日、集合場所にお越しください。雨天の場合は中止となります。</p>
-    `,
-    author: "田中美咲",
-    date: "2023年9月10日",
-    year: "2023",
+    id: 1465,
+    image: "/news-images/202505_image-2.png",
+    alt: "5/18 わんぱく相撲　松原場所 開催のお知らせ",
+    category: "お知らせ",
+    title: "5/18 わんぱく相撲　松原場所 開催のお知らせ",
+    description: "📢 第40回 #わんぱく相撲#まつばら場所 開催決定！ 📢",
+    content: `<p>📢 第40回 <a href="https://www.instagram.com/explore/tags/%E3%82%8F%E3%82%93%E3%81%B1%E3%81%8F%E7%9B%B8%E6%92%B2/">#わんぱく相撲</a><a href="https://www.instagram.com/explore/tags/%E3%81%BE%E3%81%A4%E3%81%B0%E3%82%89%E5%A0%B4%E6%89%80/">#まつばら場所</a> 開催決定！ 📢</p>
+
+<p>5/18(日) <a href="https://www.instagram.com/explore/tags/%E6%9F%B4%E7%B1%AC%E7%A5%9E%E7%A4%BE/">#柴籬神社</a> で小学生対象のわんぱく相撲が今年も開催されます💪</p>
+
+<figure class="wp-block-image size-full"><img src="/news-images/202505_image-2.png" alt="" class="wp-image-1466"/></figure>
+
+<p>豪華景品やキッチンカーも登場✨ <strong><span class="ystdb-inline--larger-sp">参加資格は松原市在住の小学生！5/12(月)締切です🕊️</span></strong><br>是非 以下のQRコードからご登録お願い致します🔥</p>
+
+<figure class="wp-block-image size-full"><img src="https://mjc.ne.jp/wp-content/uploads/2025/05/QR_820244.png" alt="" class="wp-image-1467"/></figure>
+
+<p><a href="https://docs.google.com/forms/d/1WCBtgUB6PD9ykzHozu4r1ajgfUf1RoeRnRY2ROlhjRI/edit">https://docs.google.com/forms/d/1WCBtgUB6PD9ykzHozu4r1ajgfUf1RoeRnRY2ROlhjRI/edit</a> ⇐こちらからも登録可能です！</p>
+
+<p>相撲って、体を強くするだけじゃなく、 礼儀も学べるし、最後まであきらめない気持ちも身につきます💪友達と一緒に出場して、思い出作りましょう！🌟</p>
+
+<p></p>`,
+    author: "松原青年会議所",
+    date: "2025年5月1日",
+    year: "2025",
+    readTime: "3分で読める",
+  },
+  {
+    id: 1460,
+    image: "/news-images/202505_image-1.png",
+    alt: "2025年4月定例会 創立55周年記念！澤井宏文市長ご講演「これまでの松原市の歩みと周年に対する想い」",
+    category: "お知らせ",
+    title: "2025年4月定例会 創立55周年記念！澤井宏文市長ご講演「これまでの松原市の歩みと周年に対する想い」",
+    description: "【創立55周年記念！澤井宏文市長にご講演いただきました🌸】 松原青年会議所4月定例会では、特別講師として澤井宏文市長をお迎えしました！ <img src=\"ht",
+    content: `<p>【創立55周年記念！澤井宏文市長にご講演いただきました🌸】</p>
+
+<p>松原青年会議所4月定例会では、特別講師として澤井宏文市長をお迎えしました！</p>
+
+<figure class="wp-block-image size-full"><img src="/news-images/202505_image-1.png" alt="" class="wp-image-1462"/></figure>
+
+<p><br>澤井市長は、なんと私たちの先輩！第39代松原青年会議所理事長を務められた方です✨</p>
+
+<p>今回の定例会は、創立55周年を迎えた私たちが、未来の60周年、70周年へと繋いでいくために、「周年の重要性」を学ぶ貴重な機会となりました。</p>
+
+<p>澤井市長の市政における豊富なご経験と地域に対する熱い想い。</p>
+
+<p>周年事業の成功、そしてその先の未来を見据えることの大切さを、改めて深く心に刻みました。</p>
+
+<p>松原市政についてのお話も伺い、私たちが住む街への理解も深まりました。<br>澤井市長、素晴らしいご講演をありがとうございました！</p>
+
+<p></p>
+
+<p></p>`,
+    author: "松原青年会議所",
+    date: "2025年5月1日",
+    year: "2025",
+    readTime: "2分で読める",
+  },
+  {
+    id: 1445,
+    image: "/news-images/202504_S__130875396_0-1-1024x768.jpg",
+    alt: "2025年　3月定例会「リーダーから学ぶ社会経験！」",
+    category: "お知らせ",
+    title: "2025年　3月定例会「リーダーから学ぶ社会経験！」",
+    description: "先日、松原青年会議所3月定例会を開催いたしました！ 今回の講師は、私たち松原JCの誇るべき先輩であり、株式会社アレックス代表取締役としてご活躍されている大浦先輩✨ さらに、数多くの奉仕団体でも第一線でご活躍されており、まさに地域のリーダーです！ <!-- wp:image {\"id",
+    content: `<p>先日、松原青年会議所3月定例会を開催いたしました！</p>
+
+<p>今回の講師は、私たち松原JCの誇るべき先輩であり、株式会社アレックス代表取締役としてご活躍されている大浦先輩✨</p>
+
+<p>さらに、数多くの奉仕団体でも第一線でご活躍されており、まさに地域のリーダーです！</p>
+
+<figure class="wp-block-image size-large is-resized"><img src="/news-images/202504_S__130875396_0-1-1024x768.jpg" alt="" class="wp-image-1449" style="width:580px;height:auto"/></figure>
+
+<p>今回の定例会は、私たちが地域を牽引するリーダーとして、どのように向き合うべきかを改めて深く考える機会とするため開催いたしました。</p>
+
+<p>大浦先輩の力強いメッセージと貴重な経験談は、メンバー一人ひとりの心に深く響き、今後のJC活動における成長と発展への大きな糧となりました🔥</p>
+
+<figure class="wp-block-image size-large is-resized"><img src="https://mjc.ne.jp/wp-content/uploads/2025/04/S__130875395-1-1024x768.jpg" alt="" class="wp-image-1450" style="width:595px;height:auto"/></figure>
+
+<p>大浦先輩、本当にありがとうございました！</p>
+
+<p></p>`,
+    author: "松原青年会議所",
+    date: "2025年4月29日",
+    year: "2025",
+    readTime: "2分で読める",
+  },
+  {
+    id: 1441,
+    image: "/news-images/202504_image.png",
+    alt: "河内地域合同アカデミー",
+    category: "お知らせ",
+    title: "河内地域合同アカデミー",
+    description: "先日、河内地域（柏原・河内長野・富田林・羽曳野藤井寺・東大阪・松原・八尾）全体で「河内地域合同アカデミー」が開催されました🌸 <img src=\"https://mjc.ne.jp/wp-content/uploads/2025/04/image.png\" alt=",
+    content: `<p>先日、河内地域（柏原・河内長野・富田林・羽曳野藤井寺・東大阪・松原・八尾）全体で「河内地域合同アカデミー」が開催されました🌸</p>
+
+<figure class="wp-block-image size-full"><img src="/news-images/202504_image.png" alt="" class="wp-image-1442"/></figure>
+
+<p>今年の河内地域の委員長は、当青年会議所の岸君がつとめてくれています👍</p>
+
+<p>今回のアカデミーでは、入会３年未満のメンバーを中心に、各地青年会議所の経験豊富な先輩方にご登壇いただき、JC活動の醍醐味や貴重な経験談を共有いただきました✨</p>
+
+<figure class="wp-block-image size-full"><img src="https://mjc.ne.jp/wp-content/uploads/2025/04/image-1.png" alt="" class="wp-image-1443"/></figure>
+
+<p>また、グループディスカッションでは「５年後の河内地域」をテーマに活発な意見交換を実施。例で言えば、一つのグループでは、「地域の名産を作るにはどう行動すべきか？」という題材を用いて、未来に向けた熱い議論が交わされました🔥</p>
+
+<p>私たち青年世代こそが、地域の明るい未来を切り拓く担い手です💪<br>この学びを活かし、メンバー一同、手を取り合って地域のために邁進してまいります！</p>
+
+<p></p>`,
+    author: "松原青年会議所",
+    date: "2025年4月29日",
+    year: "2025",
+    readTime: "2分で読める",
+  },
+  {
+    id: 1422,
+    image: "/news-images/202502_S__127410184_0-1024x768.jpg",
+    alt: "2025年　2月定例会「JCI Impact!」",
+    category: "お知らせ",
+    title: "2025年　2月定例会「JCI Impact!」",
+    description: "松原青年会議所の２月例会として、公益社団法人日本青年会議所近畿地区大阪ブロック協議会が開催される 日本JCのプログラム「JCI Impact」にメンバーで出席をさせていただきました✨ <!-- wp:image {\"id\":1424,\"width\":\"572px\",\"height\":\"a...",
+    content: `<p>松原青年会議所の２月例会として、公益社団法人日本青年会議所近畿地区大阪ブロック協議会が開催される</p>
+
+<p>日本JCのプログラム「JCI　Impact」にメンバーで出席をさせていただきました✨</p>
+
+<figure class="wp-block-image size-large is-resized"><img src="/news-images/202502_S__127410184_0-1024x768.jpg" alt="" class="wp-image-1424" style="width:572px;height:auto"/></figure>
+
+<p><br><br>・地域社会のためになるようなことをしたいけどいい事業が思いつかない</p>
+
+<p>・地域社会が求めることが分からない</p>
+
+<p>等、日々のJC運動を展開するにあたり、そういった壁に当たることも多々あるかと思います。</p>
+
+<p>そこで、プログラムを通じて、地域の課題を見出し、地域社会を巻き込んだ事業を行うために個々やグループで議論を重ね、</p>
+
+<p>事業・例会の構築の際の背景・目的を明確化する方法を学ぶことができました🔥</p>
+
+<figure class="wp-block-image size-large is-resized"><img src="https://mjc.ne.jp/wp-content/uploads/2025/02/S__127410182_0-768x1024.jpg" alt="" class="wp-image-1423" style="width:437px;height:auto"/></figure>
+
+<p></p>
+
+<p><strong><span class="ystdb-inline--smaller"><span class="ystdb-inline--larger-sp">これからも私たちが、社会の課題を</span></span><span class="ystdb-inline--smaller"><span class="ystdb-inline--larger-sp">率先して</span></span><span class="ystdb-inline--smaller"><span class="ystdb-inline--larger-sp">解決することで持続可能な地域を創ることを誓います！👍</span></span></strong></p>
+
+<p></p>`,
+    author: "松原青年会議所",
+    date: "2025年2月23日",
+    year: "2025",
+    readTime: "3分で読める",
+  },
+  {
+    id: 1387,
+    image: "/news-images/202501_91414-1024x768.jpg",
+    alt: "松原青年会議所　2025年　新年互礼会",
+    category: "お知らせ",
+    title: "松原青年会議所　2025年　新年互礼会",
+    description: "2025年1月20日 一般社団法人松原青年会議所 新年互礼会に沢山の方にご臨席を賜り、ありがとうございました🙇‍♂️ <img src=\"https://mjc.ne.jp/w",
+    content: `<p>2025年1月20日 一般社団法人松原青年会議所 新年互礼会に沢山の方にご臨席を賜り、ありがとうございました🙇‍♂️</p>
+
+<figure class="wp-block-image size-large is-resized"><img src="/news-images/202501_91414-1024x768.jpg" alt="" class="wp-image-1388" style="width:442px;height:auto"/></figure>
+
+<p>今年のスローガンは、「心を磨き 人生を彩る」</p>
+
+<p>心を鍛錬し続けることでより磨きがかかり、より充実感や幸福感のある素晴らしい人生になると確信しています🔥</p>
+
+<figure class="wp-block-image size-large is-resized"><img src="https://mjc.ne.jp/wp-content/uploads/2025/01/80e78a2879658061c40a9cd299e07502-1024x769.jpg" alt="" class="wp-image-1389" style="width:349px;height:auto"/></figure>
+
+<p>メンバー一人ひとりが、何事にも果敢にチャレンジしていき、リーダーシップをより発揮し、これからも地域にとって必要な団体であり続けられるように邁進してまいります👊</p>
+
+<figure class="wp-block-image size-large is-resized"><img src="https://mjc.ne.jp/wp-content/uploads/2025/01/448b7af6d5c654afed6f3ceca081434a-768x1024.jpg" alt="" class="wp-image-1390" style="width:361px;height:auto"/></figure>
+
+<p></p>
+
+<figure class="wp-block-image size-large is-resized"><img src="https://mjc.ne.jp/wp-content/uploads/2025/01/e556ff54d8a7f7f400eb279c63d55fe1-1024x769.jpg" alt="" class="wp-image-1391" style="width:366px;height:auto"/></figure>
+
+<p>メンバーも大募集しております‼️<br>・自己成長に繋げたい<br>・地域社会に貢献したい<br>・リーダーシップの育成 等</p>
+
+<p>JCだからこそできることが沢山ありますので、お気軽にご連絡お待ちしております🔥</p>
+
+<p><a href="https://www.instagram.com/explore/tags/%E6%9D%BE%E5%8E%9F%E9%9D%92%E5%B9%B4%E4%BC%9A%E8%AD%B0%E6%89%80/">#松原青年会議所</a><br><a href="https://www.instagram.com/explore/tags/%E6%9D%BE%E5%8E%9Fjc/">#松原JC</a><br><a href="https://www.instagram.com/explore/tags/%E5%9C%B0%E5%9F%9F%E7%A4%BE%E4%BC%9A%E3%81%AB%E8%B2%A2%E7%8C%AE/">#地域社会に貢献</a><br><a href="https://www.instagram.com/explore/tags/%E3%82%BB%E3%83%BC%E3%83%95%E3%82%B3%E3%83%9F%E3%83%A5%E3%83%8B%E3%83%86%E3%82%A3/">#セーフコミュニティ</a><br><a href="https://www.instagram.com/explore/tags/%E3%83%AA%E3%83%BC%E3%83%80%E3%83%BC%E3%82%B7%E3%83%83%E3%83%97/">#リーダーシップ</a><br><a href="https://www.instagram.com/explore/tags/%E5%BF%83%E3%82%92%E7%A3%A8%E3%81%8D%E4%BA%BA%E7%94%9F%E3%82%92%E5%BD%A9%E3%82%8B/">#心を磨き人生を彩る</a><br><a href="https://www.instagram.com/explore/tags/%E3%83%A1%E3%83%B3%E3%83%90%E3%83%BC%E5%8B%9F%E9%9B%86%E4%B8%AD/">#メンバー募集中</a></p>`,
+    author: "松原青年会議所",
+    date: "2025年1月22日",
+    year: "2025",
     readTime: "6分で読める",
   },
   {
-    id: 4,
-    image: "/about-image1.jpg",
-    alt: "定例会議のお知らせ",
+    id: 1302,
+    image: "/news-images/202409_LINE_ALBUM_大阪ブロック大会枚方大会_240930_1-1024x684.jpg",
+    alt: "大阪ブロック大会　枚方大会✨",
     category: "お知らせ",
-    title: "定例会議のお知らせ",
-    description:
-      "毎月の定例会議を開催いたします。会員の皆様はぜひご参加ください。",
-    content: `
-      <p>松原青年会議所の定例会議を下記の通り開催いたします。</p>
-      
-      <h3>開催日時</h3>
-      <p>2024年1月20日（土）18:00〜20:00</p>
-      
-      <h3>開催場所</h3>
-      <p>松原市民会館 第2会議室</p>
-      
-      <h3>議題</h3>
-      <ul>
-        <li>2024年度事業計画について</li>
-        <li>新年度役員体制について</li>
-        <li>今後のイベント予定について</li>
-        <li>その他</li>
-      </ul>
-      
-      <h3>出欠について</h3>
-      <p>会員の皆様は1月15日までに出欠のご連絡をお願いいたします。</p>
-    `,
-    author: "山本一郎",
-    date: "2024年1月5日",
+    title: "大阪ブロック大会　枚方大会✨",
+    description: "９月２９日に公益社団法人日本青年会議所 大阪ブロック協議会開催の大阪ブロック大会 枚方大会において、 松原市の一般社団法人全日本ヒューマンサポート様と<a h",
+    content: `<p>９月２９日に公益社団法人日本青年会議所　大阪ブロック協議会開催の<a href="https://www.jaycee.or.jp/18202/" title="大阪ブロック大会　枚方大会">大阪ブロック大会　枚方大会</a>において、</p>
+
+<p>松原市の一般社団法人<em><a href="http://www.zen-nippon-hs.com/" title="全日本ヒューマンサポート様">全日本ヒューマンサポート様</a></em>と<a href="https://himawari-sagyousyo.com/" title="ひまわり作業所様">ひまわり作業所様</a>が共同制作されている</p>
+
+<p>災害用トイレの製作体験を松原JCのブースにて、子どもたちをメインに体験していただきました✨</p>
+
+<figure class="wp-block-image size-large is-resized"><img src="/news-images/202409_LINE_ALBUM_大阪ブロック大会枚方大会_240930_1-1024x684.jpg" alt="" class="wp-image-1304" style="width:446px;height:auto"/></figure>
+
+<figure class="wp-block-image size-large is-resized"><img src="https://mjc.ne.jp/wp-content/uploads/2024/09/LINE_ALBUM_大阪ブロック大会枚方大会_240930_2-1024x684.jpg" alt="" class="wp-image-1303" style="width:448px;height:auto"/></figure>
+
+<p>今回の製作を通じて、昨今の異常気象・災害に対して、より関心を持っていただき、</p>
+
+<p>一人ひとりが災害に対する備えを心掛けていただけたら、幸いです🙌</p>
+
+<p></p>`,
+    author: "松原青年会議所",
+    date: "2024年9月30日",
     year: "2024",
     readTime: "2分で読める",
   },
   {
-    id: 5,
-    image: "/about-image1.jpg",
-    alt: "新年会開催のお知らせ",
-    category: "イベント",
-    title: "新年会開催のお知らせ",
-    description:
-      "新年を祝う会を開催いたします。会員同士の親睦を深める良い機会となりますので、多くの方のご参加をお待ちしております。",
-    content: `
-      <p>2024年の新年を祝い、会員相互の親睦を深めるため、新年会を開催いたします。</p>
-      
-      <h3>開催日時</h3>
-      <p>2024年2月10日（土）18:30〜21:00</p>
-      
-      <h3>開催場所</h3>
-      <p>松原グランドホテル 宴会場「彩」</p>
-      
-      <h3>会費</h3>
-      <p>会員：5,000円 / ゲスト：6,000円</p>
-      
-      <h3>プログラム</h3>
-      <ul>
-        <li>理事長年頭挨拶</li>
-        <li>新入会員紹介</li>
-        <li>懇親会</li>
-        <li>お楽しみ抽選会</li>
-      </ul>
-      
-      <h3>参加申込</h3>
-      <p>2月5日までに事務局へお申し込みください。ご家族・ご友人のご参加も歓迎いたします。</p>
-    `,
-    author: "鈴木花子",
-    date: "2024年2月1日",
+    id: 1267,
+    image: "/news-images/202406_S__113786896-2-1024x867.jpg",
+    alt: "２０２４年度　５月定例会（５月２４日）",
+    category: "お知らせ",
+    title: "２０２４年度　５月定例会（５月２４日）",
+    description: "<img src=\"https://mjc.ne.jp/wp-content/uploads/2024/06/S__113786896-",
+    content: `<figure class="wp-block-gallery has-nested-images columns-default is-cropped"><figure class="wp-block-image size-large"><img src="/news-images/202406_S__113786896-2-1024x867.jpg" alt="" class="wp-image-1274"/></figure>
+</figure>
+
+<p>5月定例会は、松原JC広報発信委員会が担当しました。今回は、近代の情報発信について、委員長自らが講師として、定例会を開催しました。</p>
+
+<p>メンバー一人ひとりが情報発信の方法を学ぶ事によって、誰もが松原青年会議所の活動などを発信が出来るようになり、属人化しない環境を整え、</p>
+
+<p>社内やプライベートでも情報発信をより活用していただくことで、各社のさらなるイメージアップやプライベートがより充実感が溢れていく為の一助となりました🎶</p>
+
+<p></p>
+
+<p></p>`,
+    author: "松原青年会議所",
+    date: "2024年6月23日",
+    year: "2024",
+    readTime: "1分で読める",
+  },
+  {
+    id: 1261,
+    image: "/news-images/202406_6B1BCDE4-06AE-4078-98D4-7CF713E38B0C-1024x768.jpg",
+    alt: "２０２４年度　４月定例会（４月１９日）",
+    category: "お知らせ",
+    title: "２０２４年度　４月定例会（４月１９日）",
+    description: "<img src=\"https://mjc.ne.jp/wp-content/uploads/2024/06/6B1BCDE4-06AE",
+    content: `<figure class="wp-block-gallery has-nested-images columns-default is-cropped"><figure class="wp-block-image size-large"><img src="/news-images/202406_6B1BCDE4-06AE-4078-98D4-7CF713E38B0C-1024x768.jpg" alt="" class="wp-image-1264"/></figure>
+
+<figure class="wp-block-image size-large"><img src="https://mjc.ne.jp/wp-content/uploads/2024/06/150D3B5E-EAD8-4A32-83DC-63920898DF60-1024x768.jpg" alt="" class="wp-image-1262"/></figure>
+
+<figure class="wp-block-image size-large"><img src="https://mjc.ne.jp/wp-content/uploads/2024/06/F5AF86FD-8A0B-4D77-B746-E6476E88A4FB-1024x768.jpg" alt="" class="wp-image-1263"/></figure>
+</figure>
+
+<p>４月定例会は、NEXT55委員会が担当しました。４月定例会では、来たる松原青年会議所の５５周年にむけて、</p>
+
+<p>今一度メンバーの一人ひとりが、JCとは何かという事を考え、学ぶことが必要だと考えました。</p>
+
+<p>メンバーがJCとの向き合い方を再度考える機会にするため、日本青年会議所JC教育推進委員会より道明トレーナーにご協力いただき、</p>
+
+<p>VMV(Vision Mission&Values)というJCについての講義を行っていただきました。</p>
+
+<p>JCが設立された時代背景や存在する目的、JCICreedの理解を通じて我々がめざす未来やMISSIONが再認識できる内容で内容の濃い定例会となりました✨</p>`,
+    author: "松原青年会議所",
+    date: "2024年6月23日",
     year: "2024",
     readTime: "3分で読める",
   },
   {
-    id: 6,
-    image: "/about-image1.jpg",
-    alt: "春のボランティア活動",
-    category: "イベント",
-    title: "春のボランティア活動",
-    description:
-      "春の清掃活動を行います。地域の美化に貢献しましょう。どなたでもご参加いただけます。",
-    content: `
-      <p>春の訪れとともに、地域清掃ボランティア活動を実施いたします。</p>
-      
-      <h3>活動概要</h3>
-      <p>冬の間に溜まったゴミを拾い、春を迎える準備をしましょう。地域の皆様と一緒に、美しいまちづくりに貢献します。</p>
-      
-      <h3>開催日時</h3>
-      <p>2024年3月24日（日）9:00〜12:00</p>
-      
-      <h3>集合場所</h3>
-      <p>松原中央公園 正面入口</p>
-      
-      <h3>活動エリア</h3>
-      <ul>
-        <li>松原中央公園周辺</li>
-        <li>駅前商店街</li>
-        <li>河川敷遊歩道</li>
-      </ul>
-      
-      <h3>参加について</h3>
-      <p>事前申込不要、当日参加OKです。お子様連れの方も大歓迎です。清掃用具は事務局で準備いたします。</p>
-      
-      <p>皆様のご参加をお待ちしております。</p>
-    `,
-    author: "高橋誠",
-    date: "2024年3月15日",
+    id: 1186,
+    image: "/news-images/202403_3月定例会_3-1024x684.jpg",
+    alt: "２０２４年度　３月定例会（３月７日）",
+    category: "お知らせ",
+    title: "２０２４年度　３月定例会（３月７日）",
+    description: "<img src=\"https://mjc.ne.jp/wp-content/uploads/2024/03/3月定例会_3-1024x",
+    content: `<figure class="wp-block-gallery has-nested-images columns-default is-cropped"><figure class="wp-block-image size-large"><img src="/news-images/202403_3月定例会_3-1024x684.jpg" alt="" class="wp-image-1187"/></figure>
+
+<figure class="wp-block-image size-large"><img src="https://mjc.ne.jp/wp-content/uploads/2024/03/3月定例会_4-1024x684.jpg" alt="" class="wp-image-1188"/></figure>
+
+<figure class="wp-block-image size-large"><img src="https://mjc.ne.jp/wp-content/uploads/2024/03/3月定例会_1-1024x684.jpg" alt="" class="wp-image-1189"/></figure>
+</figure>
+
+<p>３月定例会は、青少年育成委員会が担当しました。３月定例会では、能登半島地震における子ども達への支援募金活動を通じ、被災された方々へ少しでもお力添えができればという想いと、メンバー同士で協力して例会を実施することで「和気藹藹」となるように想いを込めた例会でした。募金いただきました皆様、感謝申し上げます。皆様からいただいた募金につきましては、青少年育成委員会の事業でありますので、セーブザチルドレンを通じて、全額寄付をさせて頂きます。ありがとうございました。</p>`,
+    author: "松原青年会議所",
+    date: "2024年3月9日",
     year: "2024",
-    readTime: "4分で読める",
+    readTime: "2分で読める",
+  },
+  {
+    id: 1175,
+    image: "/news-images/202403_1月定例会並びに定時総会_1-1-1024x768.jpg",
+    alt: "２０２４年度　1月定例会並びに定時総会（１月２６日）",
+    category: "お知らせ",
+    title: "２０２４年度　1月定例会並びに定時総会（１月２６日）",
+    description: "<img src=\"https://mjc.ne.jp/wp-content/uploads/2024/03/1月定例会並びに定時総会_",
+    content: `<figure class="wp-block-gallery has-nested-images columns-default is-cropped"><figure class="wp-block-image size-large"><img src="/news-images/202403_1月定例会並びに定時総会_1-1-1024x768.jpg" alt="" class="wp-image-1176"/></figure>
+
+<figure class="wp-block-image size-large"><img src="https://mjc.ne.jp/wp-content/uploads/2024/03/1月定例会並びに定時総会_2-2-768x1024.jpg" alt="" class="wp-image-1178"/></figure>
+
+<figure class="wp-block-image size-large"><img src="https://mjc.ne.jp/wp-content/uploads/2024/03/1月定例会並びに定時総会_3-1-768x1024.jpg" alt="" class="wp-image-1179"/></figure>
+
+<figure class="wp-block-image size-large"><img src="https://mjc.ne.jp/wp-content/uploads/2024/03/1月定例会並びに定時総会_4-1-edited.jpg" alt="" class="wp-image-1181"/></figure>
+
+<figure class="wp-block-image size-large"><img src="https://mjc.ne.jp/wp-content/uploads/2024/03/1月定例会並びに定時総会_5-1-edited.jpg" alt="" class="wp-image-1182"/></figure>
+</figure>
+
+<p>１月定例会並びに定時総会は、松原JC運動発信委員会が担当しました。米田理事長、竹綱会長からご挨拶をいただき、褒賞を行いました。また、２０２４年度定時総会では、２０２４年度の議案が可決され、いよいよ事業が始まりますので、皆様今年一年よろしくお願いいたします。</p>`,
+    author: "松原青年会議所",
+    date: "2024年3月9日",
+    year: "2024",
+    readTime: "3分で読める",
+  },
+  {
+    id: 1157,
+    image: "/news-images/202403_2024年度　2月定例会_4-1024x768.jpg",
+    alt: "２０２４年度　２月定例会（２月１６日）",
+    category: "お知らせ",
+    title: "２０２４年度　２月定例会（２月１６日）",
+    description: "<img src=\"https://mjc.ne.jp/wp-content/uploads/2024/03/2024年度 2月定例会_",
+    content: `<figure class="wp-block-gallery has-nested-images columns-default is-cropped"><figure class="wp-block-image size-large"><img src="/news-images/202403_2024年度　2月定例会_4-1024x768.jpg" alt="" class="wp-image-1169"/></figure>
+</figure>
+
+<figure class="wp-block-gallery has-nested-images columns-default is-cropped"><figure class="wp-block-image size-large"><img src="https://mjc.ne.jp/wp-content/uploads/2024/03/2024年度　2月定例会_1-1024x768.jpg" alt="" class="wp-image-1170"/></figure>
+
+<figure class="wp-block-image size-large"><img src="https://mjc.ne.jp/wp-content/uploads/2024/03/2024年度　2月定例会_2-1024x768.jpg" alt="" class="wp-image-1171"/></figure>
+
+<figure class="wp-block-image size-large"><img src="https://mjc.ne.jp/wp-content/uploads/2024/03/2024年度　2月定例会_3-1024x768.jpg" alt="" class="wp-image-1172"/></figure>
+
+<figure class="wp-block-image size-large"><img src="https://mjc.ne.jp/wp-content/uploads/2024/03/2024年度　2月定例会_5-1024x684.jpg" alt="" class="wp-image-1173"/></figure>
+</figure>
+
+<p>２月定例会は、会員開発拡大委員会が担当しました。２月定例会では、一人ひとりの自己紹介を行うことで、改めて会員同士がお互いのことを知ることで、会員同士の交流を図ることや皆の前で自分自身のことを話すことでアピールをする機会にもなりました。２０２４年度の「和気藹藹」のスローガン通り、楽しい中にも修練が含まれた例会でした！</p>`,
+    author: "松原青年会議所",
+    date: "2024年3月9日",
+    year: "2024",
+    readTime: "3分で読める",
+  },
+  {
+    id: 1151,
+    image: "/news-images/202403_新年互礼会_1-1-1024x768.jpg",
+    alt: "１月２２日　新年互例会を開催",
+    category: "お知らせ",
+    title: "１月２２日　新年互例会を開催",
+    description: "<img src=\"https://mjc.ne.jp/wp-content/uploads/2024/03/新年互礼会_1-1-102",
+    content: `<figure class="wp-block-gallery has-nested-images columns-default is-cropped"><figure class="wp-block-image size-large"><img src="/news-images/202403_新年互礼会_1-1-1024x768.jpg" alt="" class="wp-image-1155"/></figure>
+
+<figure class="wp-block-image size-large"><img src="https://mjc.ne.jp/wp-content/uploads/2024/03/新年互礼会_2-1-1024x768.jpg" alt="" class="wp-image-1154"/></figure>
+</figure>
+
+<p>本日は、新年互例会を開催しました。第５４代理事長の米田朋史君から、まずは当青年会議所へ協力いただいた御礼から、今年度も地域や子どもたちの為の運動を展開することをお伝えし、引き続き今年度のご協力のお願いをさせていただきました。そして、澤井宏文松原市長からご挨拶をいただき、続いて、河内議長、浦野衆議院議員、山本大阪府議会議員、和田地域担当副会長からご挨拶をいただきました。竹綱会長から乾杯の挨拶から歓談が始まり、アトラクションではストイッククラブ様が盛り上げていただきました。ご出席いただきました皆様ありがとうございました。</p>`,
+    author: "松原青年会議所",
+    date: "2024年3月9日",
+    year: "2024",
+    readTime: "1分で読める",
+  },
+  {
+    id: 1135,
+    image: "/news-images/202401_【1.17】松原中ロータリークラブ様-1024x768.jpg",
+    alt: "１月１７日　松原中ロータリークラブ様の例会にて新年挨拶",
+    category: "お知らせ",
+    title: "１月１７日　松原中ロータリークラブ様の例会にて新年挨拶",
+    description: "<img src=\"https://mjc.ne.jp/wp-content/uploads/2024/01/【1.17】松原中ロータリ",
+    content: `<figure class="wp-block-gallery has-nested-images columns-default is-cropped"><figure class="wp-block-image size-large"><img src="/news-images/202401_【1.17】松原中ロータリークラブ様-1024x768.jpg" alt="" class="wp-image-1136"/></figure>
+</figure>
+
+<p>本日は、松原中ロータリークラブ様の例会の貴重なお時間を頂きまして、冒頭で新年のご挨拶、今年度の米田理事長の就任挨拶をさせていただきました。今年度も引き続きよろしくお願い申し上げます。</p>`,
+    author: "松原青年会議所",
+    date: "2024年1月18日",
+    year: "2024",
+    readTime: "1分で読める",
+  },
+  {
+    id: 1132,
+    image: "/about-image1.jpg",
+    alt: "１月３日　能登半島地震における緊急支援物資について",
+    category: "お知らせ",
+    title: "１月３日　能登半島地震における緊急支援物資について",
+    description: "１月１日に石川県を中心に発生しました能登半島地震について大阪ブロック協議会対策本部を設置され、大阪ブロック協議会で物資を収集して石川県へ緊急で発送しますとご連絡がありました。松原青年会議所としても、大阪ブロック協議会より依頼がありました物資を微力ながら支援させていただきました。このたびの災害に対し....",
+    content: `<p>１月１日に石川県を中心に発生しました能登半島地震について大阪ブロック協議会対策本部を設置され、大阪ブロック協議会で物資を収集して石川県へ緊急で発送しますとご連絡がありました。松原青年会議所としても、大阪ブロック協議会より依頼がありました物資を微力ながら支援させていただきました。このたびの災害に対し、心よりお見舞い申し上げます。皆さまの一日も早いご再建をお祈りいたします。</p>`,
+    author: "松原青年会議所",
+    date: "2024年1月4日",
+    year: "2024",
+    readTime: "1分で読める",
+  },
+  {
+    id: 1121,
+    image: "/news-images/202401_【12.8】大納会②-2-1024x768.jpg",
+    alt: "１２月８日　大納会【野村会長予定者・米田理事長予定者】",
+    category: "お知らせ",
+    title: "１２月８日　大納会【野村会長予定者・米田理事長予定者】",
+    description: "<img src=\"https://mjc.ne.jp/wp-content/uploads/2024/01/【12.8】大納会②-2-",
+    content: `<figure class="wp-block-gallery has-nested-images columns-default is-cropped"><figure class="wp-block-image size-large"><img src="/news-images/202401_【12.8】大納会②-2-1024x768.jpg" alt="" class="wp-image-1126"/></figure>
+</figure>
+
+<figure class="wp-block-image size-large"><img src="https://mjc.ne.jp/wp-content/uploads/2024/01/【12.8】大納会①-1024x768.jpg" alt="" class="wp-image-1123"/></figure>
+
+<figure class="wp-block-image size-large"><img src="https://mjc.ne.jp/wp-content/uploads/2024/01/【12.8】大納会③-1-1024x768.jpg" alt="" class="wp-image-1127"/></figure>
+
+<p>本日は、２０２３年度の締めくくりであります「大納会」！！第５４代理事長予定者の米田朋史君の紹介、そして、当青年会議所より大阪ブロック協議会の会長として、第６０代会長予定者の野村将一君が壇上で挨拶がありました。野村会長予定者を支えるとともに、2024年度も変わらぬ青年会議所運動を展開してまいります。今年一年ありがとうございました。</p>`,
+    author: "松原青年会議所",
+    date: "2023年12月9日",
+    year: "2023",
+    readTime: "2分で読める",
+  },
+  {
+    id: 1117,
+    image: "/news-images/202401_【1.16】松原ロータリークラブ様-1-1024x768.jpg",
+    alt: "1月16日　松原ロータリークラブ様の例会にて新年挨拶",
+    category: "お知らせ",
+    title: "1月16日　松原ロータリークラブ様の例会にて新年挨拶",
+    description: "本日は、松原ロータリ",
+    content: `<figure class="wp-block-image size-large"><img src="/news-images/202401_【1.16】松原ロータリークラブ様-1-1024x768.jpg" alt="" class="wp-image-1119"/></figure>
+
+<p>本日は、松原ロータリークラブ様の例会の貴重なお時間を頂きまして、冒頭で新年のご挨拶、今年度の米田理事長の就任挨拶をさせていただきました。今年度も引き続きよろしくお願い申し上げます。</p>`,
+    author: "松原青年会議所",
+    date: "2024年1月18日",
+    year: "2024",
+    readTime: "1分で読める",
+  },
+  {
+    id: 1113,
+    image: "/news-images/202401_澤井市長　新年挨拶訪問-1-1022x1024.jpg",
+    alt: "１月１５日　澤井宏文松原市長へ新年の御挨拶",
+    category: "お知らせ",
+    title: "１月１５日　澤井宏文松原市長へ新年の御挨拶",
+    description: "",
+    content: `<figure class="wp-block-image size-large is-resized"><img src="/news-images/202401_澤井市長　新年挨拶訪問-1-1022x1024.jpg" alt="" class="wp-image-1114" width="767" height="768"/></figure>
+
+<p>新年おめでとうございます！本日は、澤井宏文松原市長へ新年のご挨拶に伺わせていただきました。第５４代理事長の米田朋史君から、まずは昨年の御礼から、今年のスローガン、組織等の説明や今年度も地域や子どもたちの為の運動を展開することをお伝えし、澤井市長から、様々なアドバイスやご指導をいただきました。今年度もよろしくお願いいたします。</p>`,
+    author: "松原青年会議所",
+    date: "2024年1月18日",
+    year: "2024",
+    readTime: "1分で読める",
   },
 ];
 
@@ -238,7 +518,7 @@ export const newsData: NewsItem[] = [
 export const newsCategories = ["すべて", "お知らせ", "イベント"];
 
 // 年一覧
-export const newsYears = ["すべて", "2024", "2023"];
+export const newsYears = ["すべて", "2025", "2024", "2023"];
 
 // IDでニュースを取得
 export const getNewsById = (id: number): NewsItem | undefined => {
