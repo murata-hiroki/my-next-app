@@ -58,14 +58,6 @@ const benefits = [
   },
 ];
 
-// 入会資格
-const requirements = [
-  { label: "年齢", value: "20歳以上40歳未満の方" },
-  { label: "地域", value: "松原市内または近郊にお住まい、またはお勤めの方" },
-  { label: "職業", value: "不問（会社員、経営者、自営業、士業など）" },
-  { label: "経験", value: "不問（初めての方も歓迎）" },
-];
-
 // 入会の流れ
 const steps = [
   {
