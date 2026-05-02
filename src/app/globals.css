@@ -5,6 +5,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  color-scheme: light only;
 }
 
 @keyframes marquee {
@@ -29,12 +30,14 @@
   animation-play-state: paused;
 }
 
+/* ダークモード対応を無効化（常にライトモード）
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
 }
+*/
 
 body {
   color: var(--foreground);
