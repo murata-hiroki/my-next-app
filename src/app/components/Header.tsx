@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { Mail, UserPlus, Menu, X } from "lucide-react";
+import { Mail, UserPlus, Menu, X, Lock } from "lucide-react";
 import Link from "next/link";
 
 const Header = () => {
@@ -64,6 +64,13 @@ const Header = () => {
 
           {/* Right Navigation - ボタンのみ */}
           <div className="flex items-center space-x-3 xl:space-x-4">
+            <Link
+              href="/members"
+              className="text-gray-500 text-sm flex items-center gap-1 hover:text-primary-600 transition-colors"
+            >
+              <Lock size={14} className="shrink-0" />
+              <span>会員専用</span>
+            </Link>
             <Link
               href="/join"
               className="bg-primary-600 text-white px-4 py-1.5 text-sm flex items-center gap-1 rounded-full hover:opacity-90 transition-opacity"
@@ -139,6 +146,14 @@ const Header = () => {
               onClick={closeMenu}
             >
               新着情報
+            </Link>
+            <Link
+              href="/members"
+              className="text-gray-500 block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100 hover:text-primary-600 transition-colors flex items-center gap-2"
+              onClick={closeMenu}
+            >
+              <Lock size={18} className="shrink-0" />
+              会員専用
             </Link>
             <hr className="my-4" />
             <div className="flex flex-col space-y-3 px-3 pt-4">

@@ -72,6 +72,12 @@ const Footer = () => {
               >
                 理事長紹介
               </Link>
+              <Link
+                href="/members"
+                className="block text-gray-700 hover:text-black"
+              >
+                会員専用
+              </Link>
             </div>
           </div>
         </div>
