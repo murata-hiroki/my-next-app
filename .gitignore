@@ -25,6 +25,10 @@
 *.pem
 *.zip
 
+# 認証情報を含むローカルスクリプト（誤コミット防止）
+upload_to_sakura.py
+karte_format.js
+
 # debug
 npm-debug.log*
 yarn-debug.log*
